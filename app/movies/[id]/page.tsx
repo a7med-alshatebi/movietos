@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { useParams } from 'next/navigation';
 import Image from 'next/image';
 import { Star, Calendar, Clock, Heart, Bookmark, Play } from 'lucide-react';
 
@@ -107,11 +108,11 @@ const mockMovieDetails = {
     revenue: 678226554,
     tagline: "Life is like a box of chocolates. You never know what you're gonna get.",
     trailerUrl: "https://www.youtube.com/watch?v=bLvqoHBptjg"
-  }   
+  }
 };
 
 export default function MovieDetailPage() {
-  // const params = useParams();
+  const params = useParams();
   const movie = mockMovieDetails[1];
   const [isFavorite, setIsFavorite] = useState(false);
   const [isInWatchlist, setIsInWatchlist] = useState(false);
