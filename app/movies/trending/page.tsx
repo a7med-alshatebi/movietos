@@ -10,7 +10,7 @@ const mockTrendingMovies = [
 	{
 		id: 1,
 		title: 'Avatar: The Way of Water',
-		poster: '/public/avatarthewayofwater.jpeg',
+		poster: '/avatarthewayofwater.jpeg',
 		rating: 7.6,
 		year: 2022,
 		runtime: 192,
