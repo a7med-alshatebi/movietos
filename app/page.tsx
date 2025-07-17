@@ -30,7 +30,7 @@ export default function Home() {
               <h3 className="text-xl font-semibold text-white">Trending Movies</h3>
             </div>
             <p className="text-gray-300">
-              Discover the latest trending movies and what's popular right now
+              Discover the latest trending movies and what&apos;s popular right now
             </p>
             <Link
               href="/movies/trending"
@@ -62,7 +62,7 @@ export default function Home() {
               <h3 className="text-xl font-semibold text-white">Top Rated</h3>
             </div>
             <p className="text-gray-300">
-              Check out the highest-rated movies of all time and critics' favorites
+              Check out the highest-rated movies of all time and critics&apos; favorites
             </p>
             <Link
               href="/movies/top-rated"

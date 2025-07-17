@@ -91,7 +91,7 @@ export default function WatchlistPage() {
         case 'year':
           return b.year - a.year;
         case 'priority':
-          const priorityOrder = { high: 3, medium: 2, low: 1 };
+          const priorityOrder: { [key: string]: number } = { high: 3, medium: 2, low: 1 };
           return priorityOrder[b.priority] - priorityOrder[a.priority];
         case 'dateAdded':
         default:

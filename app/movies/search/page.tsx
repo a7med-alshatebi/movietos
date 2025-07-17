@@ -5,8 +5,20 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Search, Star, Calendar, Clock, Filter } from 'lucide-react';
 
+// Define the Movie type
+interface Movie {
+  id: number;
+  title: string;
+  poster: string;
+  rating: number;
+  year: number;
+  runtime: number;
+  genre: string;
+  overview: string;
+}
+
 // Mock data for search results
-const mockSearchResults = [
+const mockSearchResults: Movie[] = [
   {
     id: 1,
     title: "The Dark Knight",
@@ -41,7 +53,7 @@ const mockSearchResults = [
 
 export default function SearchPage() {
   const [searchQuery, setSearchQuery] = useState('');
-  const [searchResults, setSearchResults] = useState([]);
+  const [searchResults, setSearchResults] = useState<Movie[]>([]);
   const [loading, setLoading] = useState(false);
   const [filters, setFilters] = useState({
     genre: '',
@@ -273,7 +285,7 @@ export default function SearchPage() {
         {/* No Results */}
         {searchQuery && searchResults.length === 0 && !loading && (
           <div className="text-center py-12">
-            <p className="text-gray-400 text-lg">No movies found for "{searchQuery}"</p>
+            <p className="text-gray-400 text-lg">No movies found for &quot;{searchQuery}&quot;</p>
             <p className="text-gray-500 mt-2">Try adjusting your search or filters</p>
           </div>
         )}

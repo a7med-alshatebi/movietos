@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { TrendingUp, Star, Calendar, Clock, Fire } from 'lucide-react';
+import { TrendingUp, Star, Calendar, Clock, Flame } from 'lucide-react';
 
 // Mock data for trending movies
 const mockTrendingMovies = [
@@ -99,7 +99,7 @@ export default function TrendingPage() {
   };
 
   const getTrendingIcon = (rank: number) => {
-    if (rank === 1) return <Fire className="text-red-500" size={24} />;
+    if (rank === 1) return <Flame className="text-red-500" size={24} />;
     if (rank === 2) return <TrendingUp className="text-orange-500" size={24} />;
     if (rank === 3) return <TrendingUp className="text-yellow-500" size={24} />;
     return <TrendingUp className="text-gray-500" size={24} />;

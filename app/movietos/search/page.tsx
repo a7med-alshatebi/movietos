@@ -5,8 +5,20 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Search, Star, Calendar, Clock, Filter } from 'lucide-react';
 
+// Define the Movie type
+interface Movie {
+  id: number;
+  title: string;
+  poster: string;
+  rating: number;
+  year: number;
+  runtime: number;
+  genre: string;
+  overview: string;
+}
+
 // Mock data for search results
-const mockSearchResults = [
+const mockSearchResults: Movie[] = [
   {
     id: 1,
     title: "The Dark Knight",
@@ -41,7 +53,7 @@ const mockSearchResults = [
 
 export default function SearchPage() {
   const [searchQuery, setSearchQuery] = useState('');
-  const [searchResults, setSearchResults] = useState([]);
+  const [searchResults, setSearchResults] = useState<Movie[]>([]);
   const [loading, setLoading] = useState(false);
   const [filters, setFilters] = useState({
     genre: '',
