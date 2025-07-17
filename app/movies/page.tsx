@@ -40,7 +40,7 @@ const mockMovies = [
   {
     id: 4,
     title: "Pulp Fiction",
-    poster: "/pulp fiction.jpeg",
+    poster: "/pulpfiction.jpeg",
     rating: 8.9,
     year: 1994,
     runtime: 154,
