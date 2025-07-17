@@ -7,7 +7,7 @@ import { Star, Calendar, Clock, Heart, Bookmark, Play } from 'lucide-react';
 
 // Mock data for movie details
 const mockMovieDetails = {
-  1: {
+  "1": {
     id: 1,
     title: "The Dark Knight",
     poster: "/batman.jpeg",
@@ -24,7 +24,7 @@ const mockMovieDetails = {
     tagline: "Welcome to a world without rules.",
     trailerUrl: "https://www.youtube.com/watch?v=EXeTwQWrcwY"
   },
-  2: {
+  "2": {
     id: 2,
     title: "Inception",
     poster: "/inception.jpeg",        
@@ -41,7 +41,7 @@ const mockMovieDetails = {
     tagline: "Your mind is the scene of the crime.",
     trailerUrl: "https://www.youtube.com/watch?v=YoHD9XEInc0"
   },
-  3: {
+  "3": {
     id: 3,
     title: "Interstellar",
     poster: "/interstller.jpeg",
@@ -58,7 +58,7 @@ const mockMovieDetails = {
     tagline: "Mankind was born on Earth. It was never meant to die here.",
     trailerUrl: "https://www.youtube.com/watch?v=zSWdZVtXT0"
   },
-  4: {
+  "4": {
     id: 4,
     title: "Pulp Fiction",
     poster: "/pulpfiction.jpeg",
@@ -75,7 +75,7 @@ const mockMovieDetails = {
     tagline: "Just because you are a character doesn't mean that you have character.",
     trailerUrl: "https://www.youtube.com/watch?v=s7EdQ4Fq9l"
   },
-  5: {
+  "5": {
     id: 5,
     title: "The Matrix",
     poster: "/thematrix.jpeg",
@@ -92,7 +92,7 @@ const mockMovieDetails = {
     tagline: "Welcome to the Real World.",
     trailerUrl: "https://www.youtube.com/watch?v=vKQi3bpI38"
   },
-  6: {
+  "6": {
     id: 6,
     title: "Forrest Gump",
     poster: "/forestgump.webp",
@@ -114,7 +114,7 @@ const mockMovieDetails = {
 export default function MovieDetailPage() {
   const params = useParams();
   const id = Array.isArray(params.id) ? params.id[0] : params.id;
-  const movie = mockMovieDetails[Number(id) as keyof typeof mockMovieDetails];
+  const movie = mockMovieDetails[id?.toString() || "1"];
   const [isFavorite, setIsFavorite] = useState(false);
   const [isInWatchlist, setIsInWatchlist] = useState(false);
 
