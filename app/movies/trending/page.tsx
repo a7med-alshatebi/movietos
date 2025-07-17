@@ -10,7 +10,7 @@ const mockTrendingMovies = [
   {
     id: 1,
     title: "Avatar: The Way of Water",
-    poster: "/avatarthewayofwater.jpeg",
+    poster: "/avatar.jpeg",
     rating: 7.6,
     year: 2022,
     runtime: 192,
@@ -46,7 +46,7 @@ const mockTrendingMovies = [
   {
     id: 4,
     title: "The Batman",
-    poster: "/batman.jpeg",
+    poster: "/thebatman.jpeg",
     rating: 7.8,
     year: 2022,
     runtime: 176,
@@ -58,7 +58,7 @@ const mockTrendingMovies = [
   {
     id: 5,
     title: "Doctor Strange in the Multiverse of Madness",
-    poster: "/doctorstranger.jpeg",
+    poster: "/doctorstrangerjpeg",
     rating: 6.9,
     year: 2022,
     runtime: 126,
