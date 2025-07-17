@@ -26,17 +26,17 @@ const mockMovieDetails = {
   2: {
     id: 2,
     title: "Inception",
-    poster: "/inception.jpeg",
+    poster: "/inception.jpeg",        
     backdrop: "/inception.jpeg",
     rating: 8.8,
     year: 2010,
     runtime: 148,
     genre: "Action, Sci-Fi, Thriller",
     director: "Christopher Nolan",
-    cast: ["Leonardo DiCaprio", "Joseph Gordon-Levitt", "Ellen Page", "Tom Hardy"],
-    overview: "A thief who steals corporate secrets through dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O.",
+    cast: ["Leonardo DiCaprio", "Joseph Gordon-Levitt", "Elliot Page", "Tom Hardy"],
+    overview: "A thief who steals corporate secrets through dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O. But his tragic past may doom the project and his team to disaster.",
     budget: 160000000,
-    revenue: 829895144,
+    revenue: 836800000,
     tagline: "Your mind is the scene of the crime.",
     trailerUrl: "https://www.youtube.com/watch?v=YoHD9XEInc0"
   },
@@ -51,11 +51,11 @@ const mockMovieDetails = {
     genre: "Adventure, Drama, Sci-Fi",
     director: "Christopher Nolan",
     cast: ["Matthew McConaughey", "Anne Hathaway", "Jessica Chastain", "Michael Caine"],
-    overview: "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.",
+    overview: "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival. As they journey through the cosmos, they encounter challenges that test their resolve and the limits of human understanding.",
     budget: 165000000,
-    revenue: 701729206,
+    revenue: 677471339,   
     tagline: "Mankind was born on Earth. It was never meant to die here.",
-    trailerUrl: "https://www.youtube.com/watch?v=zSWdZVtXT7E"
+    trailerUrl: "https://www.youtube.com/watch?v=zSWdZVtXT0"
   },
   4: {
     id: 4,
@@ -66,13 +66,13 @@ const mockMovieDetails = {
     year: 1994,
     runtime: 154,
     genre: "Crime, Drama",
-    director: "Quentin Tarantino",
+    director: "Quentin Tarantino",  
     cast: ["John Travolta", "Uma Thurman", "Samuel L. Jackson", "Bruce Willis"],
-    overview: "The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption.",
+    overview: "The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption. Each story is told in a non-linear fashion, creating a complex narrative that explores themes of morality, fate  and the human condition.",
     budget: 8000000,
     revenue: 213928762,
-    tagline: "Just because you are a character doesn't mean you have character.",
-    trailerUrl: "https://www.youtube.com/watch?v=s7EdQ4FqbhY"
+    tagline: "Just because you are a character doesn't mean that you have character.",
+    trailerUrl: "https://www.youtube.com/watch?v=s7EdQ4Fq9l"
   },
   5: {
     id: 5,
@@ -81,15 +81,15 @@ const mockMovieDetails = {
     backdrop: "/thematrix.jpeg",
     rating: 8.7,
     year: 1999,
-    runtime: 136,
+    runtime: 136,     
     genre: "Action, Sci-Fi",
     director: "Lana Wachowski, Lilly Wachowski",
-    cast: ["Keanu Reeves", "Laurence Fishburne", "Carrie-Anne Moss", "Hugo Weaving"],
-    overview: "A computer programmer is led to fight an underground war against powerful computers who have constructed his entire reality with a system called the Matrix.",
+    cast: ["Keanu Reeves", "Laurence Fishburne", "Carrie-Ann Moss", "Hugo Weaving"],
+    overview: "A computer programmer is led to fight an underground war against powerful computers who have constructed his entire reality with a system called the Matrix. As he discovers the truth about his world, he must choose between the life he knows and the reality of the Matrix.",
     budget: 63000000,
-    revenue: 466364845,
+    revenue: 463517383,
     tagline: "Welcome to the Real World.",
-    trailerUrl: "https://www.youtube.com/watch?v=vKQi3bBA1y8"
+    trailerUrl: "https://www.youtube.com/watch?v=vKQi3bpI38"
   },
   6: {
     id: 6,
@@ -101,13 +101,13 @@ const mockMovieDetails = {
     runtime: 142,
     genre: "Drama, Romance",
     director: "Robert Zemeckis",
-    cast: ["Tom Hanks", "Robin Wright", "Gary Sinise", "Sally Field"],
+    cast: ["Tom Hanks", "Robin Wright", "Gary Sinise", "Mykel T. Williamson"],
     overview: "The presidencies of Kennedy and Johnson, the Vietnam War, the Watergate scandal and other historical events unfold from the perspective of an Alabama man with an IQ of 75.",
     budget: 55000000,
-    revenue: 678226465,
-    tagline: "Life is like a box of chocolates...you never know what you're gonna get.",
+    revenue: 678226554,
+    tagline: "Life is like a box of chocolates. You never know what you're gonna get.",
     trailerUrl: "https://www.youtube.com/watch?v=bLvqoHBptjg"
-  }
+  }   
 };
 
 export default function MovieDetailPage() {
