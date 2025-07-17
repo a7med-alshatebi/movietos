@@ -10,7 +10,7 @@ const mockFavoriteMovies = [
   {
     id: 1,
     title: "The Dark Knight",
-    poster: "/api/placeholder/300/450",
+    poster: "/batman.jpeg",
     rating: 9.0,
     year: 2008,
     runtime: 152,
@@ -21,7 +21,7 @@ const mockFavoriteMovies = [
   {
     id: 2,
     title: "Inception",
-    poster: "/api/placeholder/300/450",
+    poster: "/inception.jpeg",
     rating: 8.8,
     year: 2010,
     runtime: 148,
@@ -32,7 +32,7 @@ const mockFavoriteMovies = [
   {
     id: 3,
     title: "Interstellar",
-    poster: "/api/placeholder/300/450",
+    poster: "/interstller.jpeg",
     rating: 8.6,
     year: 2014,
     runtime: 169,

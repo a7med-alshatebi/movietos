@@ -10,7 +10,7 @@ const mockWatchlistMovies = [
   {
     id: 4,
     title: "Pulp Fiction",
-    poster: "/api/placeholder/300/450",
+    poster: "/pulp fiction.jpeg",
     rating: 8.9,
     year: 1994,
     runtime: 154,
@@ -22,7 +22,7 @@ const mockWatchlistMovies = [
   {
     id: 5,
     title: "The Matrix",
-    poster: "/api/placeholder/300/450",
+    poster: "/thematrix.jpeg",
     rating: 8.7,
     year: 1999,
     runtime: 136,
@@ -34,7 +34,7 @@ const mockWatchlistMovies = [
   {
     id: 6,
     title: "Forrest Gump",
-    poster: "/api/placeholder/300/450",
+    poster: "/forestgump.webp",
     rating: 8.8,
     year: 1994,
     runtime: 142,
@@ -46,7 +46,7 @@ const mockWatchlistMovies = [
   {
     id: 7,
     title: "Goodfellas",
-    poster: "/api/placeholder/300/450",
+    poster: "/goodfelas.jpeg",
     rating: 8.7,
     year: 1990,
     runtime: 146,

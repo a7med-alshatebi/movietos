@@ -22,7 +22,7 @@ const mockSearchResults: Movie[] = [
   {
     id: 1,
     title: "The Dark Knight",
-    poster: "/api/placeholder/300/450",
+    poster: "/batman.jpeg",
     rating: 9.0,
     year: 2008,
     runtime: 152,
@@ -32,7 +32,7 @@ const mockSearchResults: Movie[] = [
   {
     id: 2,
     title: "Inception",
-    poster: "/api/placeholder/300/450",
+    poster: "/inception.jpeg",
     rating: 8.8,
     year: 2010,
     runtime: 148,
@@ -42,12 +42,42 @@ const mockSearchResults: Movie[] = [
   {
     id: 3,
     title: "Interstellar",
-    poster: "/api/placeholder/300/450",
+    poster: "/interstller.jpeg",
     rating: 8.6,
     year: 2014,
     runtime: 169,
     genre: "Adventure, Drama, Sci-Fi",
     overview: "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival."
+  },
+  {
+    id: 4,
+    title: "Pulp Fiction",
+    poster: "/pulp fiction.jpeg",
+    rating: 8.9,
+    year: 1994,
+    runtime: 154,
+    genre: "Crime, Drama",
+    overview: "The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption."
+  },
+  {
+    id: 5,
+    title: "The Matrix",
+    poster: "/thematrix.jpeg",
+    rating: 8.7,
+    year: 1999,
+    runtime: 136,
+    genre: "Action, Sci-Fi",
+    overview: "A computer programmer is led to fight an underground war against powerful computers who have constructed his entire reality with a system called the Matrix."
+  },
+  {
+    id: 6,
+    title: "Forrest Gump",
+    poster: "/forestgump.webp",
+    rating: 8.8,
+    year: 1994,
+    runtime: 142,
+    genre: "Drama, Romance",
+    overview: "The presidencies of Kennedy and Johnson, the Vietnam War, the Watergate scandal and other historical events unfold from the perspective of an Alabama man with an IQ of 75."
   }
 ];
 

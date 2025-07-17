@@ -9,8 +9,8 @@ const mockMovieDetails = {
   1: {
     id: 1,
     title: "The Dark Knight",
-    poster: "/api/placeholder/400/600",
-    backdrop: "/api/placeholder/1200/675",
+    poster: "/batman.jpeg",
+    backdrop: "/batman.jpeg",
     rating: 9.0,
     year: 2008,
     runtime: 152,

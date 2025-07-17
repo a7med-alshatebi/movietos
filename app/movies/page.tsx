@@ -10,7 +10,7 @@ const mockMovies = [
   {
     id: 1,
     title: "The Dark Knight",
-    poster: "/api/placeholder/300/450",
+    poster: "/batman.jpeg",
     rating: 9.0,
     year: 2008,
     runtime: 152,
@@ -20,7 +20,7 @@ const mockMovies = [
   {
     id: 2,
     title: "Inception",
-    poster: "/api/placeholder/300/450",
+    poster: "/inception.jpeg",
     rating: 8.8,
     year: 2010,
     runtime: 148,
@@ -30,7 +30,7 @@ const mockMovies = [
   {
     id: 3,
     title: "Interstellar",
-    poster: "/api/placeholder/300/450",
+    poster: "/interstller.jpeg",
     rating: 8.6,
     year: 2014,
     runtime: 169,
@@ -40,7 +40,7 @@ const mockMovies = [
   {
     id: 4,
     title: "Pulp Fiction",
-    poster: "/api/placeholder/300/450",
+    poster: "/pulp fiction.jpeg",
     rating: 8.9,
     year: 1994,
     runtime: 154,
@@ -50,7 +50,7 @@ const mockMovies = [
   {
     id: 5,
     title: "The Matrix",
-    poster: "/api/placeholder/300/450",
+    poster: "/thematrix.jpeg",
     rating: 8.7,
     year: 1999,
     runtime: 136,
@@ -60,7 +60,7 @@ const mockMovies = [
   {
     id: 6,
     title: "Forrest Gump",
-    poster: "/api/placeholder/300/450",
+    poster: "/forestgump.webp",
     rating: 8.8,
     year: 1994,
     runtime: 142,

@@ -10,7 +10,7 @@ const mockTrendingMovies = [
   {
     id: 1,
     title: "Avatar: The Way of Water",
-    poster: "/api/placeholder/300/450",
+    poster: "/avatarthewayofwater.jpeg",
     rating: 7.6,
     year: 2022,
     runtime: 192,
@@ -22,7 +22,7 @@ const mockTrendingMovies = [
   {
     id: 2,
     title: "Top Gun: Maverick",
-    poster: "/api/placeholder/300/450",
+    poster: "/topgun.jpeg",
     rating: 8.3,
     year: 2022,
     runtime: 130,
@@ -34,7 +34,7 @@ const mockTrendingMovies = [
   {
     id: 3,
     title: "Black Panther: Wakanda Forever",
-    poster: "/api/placeholder/300/450",
+    poster: "/blackpanther.jpeg",
     rating: 6.7,
     year: 2022,
     runtime: 161,
@@ -46,7 +46,7 @@ const mockTrendingMovies = [
   {
     id: 4,
     title: "The Batman",
-    poster: "/api/placeholder/300/450",
+    poster: "/batman.jpeg",
     rating: 7.8,
     year: 2022,
     runtime: 176,
@@ -58,7 +58,7 @@ const mockTrendingMovies = [
   {
     id: 5,
     title: "Doctor Strange in the Multiverse of Madness",
-    poster: "/api/placeholder/300/450",
+    poster: "/doctorstranger.jpeg",
     rating: 6.9,
     year: 2022,
     runtime: 126,
@@ -70,7 +70,7 @@ const mockTrendingMovies = [
   {
     id: 6,
     title: "Minions: The Rise of Gru",
-    poster: "/api/placeholder/300/450",
+    poster: "/minions.jpeg",
     rating: 6.5,
     year: 2022,
     runtime: 87,
