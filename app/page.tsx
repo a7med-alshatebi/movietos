@@ -1,103 +1,109 @@
-import Image from "next/image";
+import Link from "next/link";
+import { Search, Film, TrendingUp, Star } from "lucide-react";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900">
+      {/* Hero Section */}
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-6xl font-bold text-white mb-6">
+            Movie<span className="text-purple-400">Discovery</span>
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            Discover amazing movies, explore trending films, and find your next favorite watch
+          </p>
+          <Link
+            href="/movies"
+            className="inline-flex items-center bg-purple-600 hover:bg-purple-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+            <Search className="mr-2" size={20} />
+            Start Exploring
+          </Link>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+
+        {/* Features Grid */}
+        <div className="grid md:grid-cols-3 gap-8 mb-16">
+          <div className="bg-gray-800/50 backdrop-blur-sm p-8 rounded-xl border border-gray-700">
+            <div className="flex items-center mb-4">
+              <TrendingUp className="text-purple-400 mr-3" size={24} />
+              <h3 className="text-xl font-semibold text-white">Trending Movies</h3>
+            </div>
+            <p className="text-gray-300">
+              Discover the latest trending movies and what's popular right now
+            </p>
+            <Link
+              href="/movies/trending"
+              className="inline-block mt-4 text-purple-400 hover:text-purple-300 font-medium"
+            >
+              View Trending →
+            </Link>
+          </div>
+
+          <div className="bg-gray-800/50 backdrop-blur-sm p-8 rounded-xl border border-gray-700">
+            <div className="flex items-center mb-4">
+              <Film className="text-purple-400 mr-3" size={24} />
+              <h3 className="text-xl font-semibold text-white">Browse by Genre</h3>
+            </div>
+            <p className="text-gray-300">
+              Explore movies by your favorite genres and discover new categories
+            </p>
+            <Link
+              href="/movies/genres"
+              className="inline-block mt-4 text-purple-400 hover:text-purple-300 font-medium"
+            >
+              Browse Genres →
+            </Link>
+          </div>
+
+          <div className="bg-gray-800/50 backdrop-blur-sm p-8 rounded-xl border border-gray-700">
+            <div className="flex items-center mb-4">
+              <Star className="text-purple-400 mr-3" size={24} />
+              <h3 className="text-xl font-semibold text-white">Top Rated</h3>
+            </div>
+            <p className="text-gray-300">
+              Check out the highest-rated movies of all time and critics' favorites
+            </p>
+            <Link
+              href="/movies/top-rated"
+              className="inline-block mt-4 text-purple-400 hover:text-purple-300 font-medium"
+            >
+              View Top Rated →
+            </Link>
+          </div>
+        </div>
+
+        {/* Quick Navigation */}
+        <div className="text-center">
+          <h2 className="text-3xl font-bold text-white mb-8">Quick Navigation</h2>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link
+              href="/movies"
+              className="bg-gray-800 hover:bg-gray-700 text-white px-6 py-3 rounded-lg transition-colors"
+            >
+              All Movies
+            </Link>
+            <Link
+              href="/movies/search"
+              className="bg-gray-800 hover:bg-gray-700 text-white px-6 py-3 rounded-lg transition-colors"
+            >
+              Search Movies
+            </Link>
+            <Link
+              href="/favorites"
+              className="bg-gray-800 hover:bg-gray-700 text-white px-6 py-3 rounded-lg transition-colors"
+            >
+              My Favorites
+            </Link>
+            <Link
+              href="/watchlist"
+              className="bg-gray-800 hover:bg-gray-700 text-white px-6 py-3 rounded-lg transition-colors"
+            >
+              Watch Later
+            </Link>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
