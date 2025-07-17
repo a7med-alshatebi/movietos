@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { TrendingUp, Star, Calendar, Clock, Flame } from 'lucide-react';
@@ -120,7 +120,7 @@ export default function TrendingPage() {
             <TrendingUp className="mr-3 text-purple-400" size={40} />
             Trending Movies
           </h1>
-          <p className="text-gray-400">Discover what's popular right now</p>
+          <p className="text-gray-400">Discover what&apos;s popular right now</p>
         </div>
 
         {/* Period Selector */}
@@ -153,7 +153,7 @@ export default function TrendingPage() {
         {/* Trending Movies */}
         {!loading && (
           <div className="space-y-6">
-            {trendingMovies.map((movie, index) => (
+            {trendingMovies.map((movie) => (
               <div key={movie.id} className="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
                 <div className="flex flex-col md:flex-row">
                   {/* Rank and Poster */}

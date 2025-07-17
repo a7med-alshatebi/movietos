@@ -1,9 +1,8 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Image from 'next/image';
 import { Star, Calendar, Clock, Heart, Bookmark, Play } from 'lucide-react';
-import { useParams } from 'next/navigation';
 
 // Mock data for movie details
 const mockMovieDetails = {
@@ -27,9 +26,8 @@ const mockMovieDetails = {
 };
 
 export default function MovieDetailPage() {
-  const params = useParams();
-  const movieId = params.id as string;
-  const [movie, setMovie] = useState(mockMovieDetails[1]);
+  // const params = useParams();
+  const movie = mockMovieDetails[1];
   const [isFavorite, setIsFavorite] = useState(false);
   const [isInWatchlist, setIsInWatchlist] = useState(false);
 

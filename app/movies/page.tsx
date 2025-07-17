@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Star, Calendar, Clock } from 'lucide-react';
@@ -71,7 +71,6 @@ const mockMovies = [
 
 export default function MoviesPage() {
   const [movies, setMovies] = useState(mockMovies);
-  const [loading, setLoading] = useState(false);
   const [sortBy, setSortBy] = useState('title');
 
   const handleSort = (criteria: string) => {

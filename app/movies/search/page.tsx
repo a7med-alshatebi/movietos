@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Search, Star, Calendar, Clock, Filter } from 'lucide-react';
@@ -89,7 +89,7 @@ export default function SearchPage() {
     }, 500);
   };
 
-  const applyFilters = () => {
+  const applyFilters = useCallback(() => {
     let filtered = mockSearchResults;
 
     if (filters.genre) {
@@ -110,7 +110,7 @@ export default function SearchPage() {
     }
 
     setSearchResults(filtered);
-  };
+  }, [filters]);
 
   const clearFilters = () => {
     setFilters({ genre: '', year: '', rating: '' });
@@ -127,7 +127,7 @@ export default function SearchPage() {
 
   useEffect(() => {
     applyFilters();
-  }, [filters]);
+  }, [filters, applyFilters]);
 
   return (
     <div className="min-h-screen bg-gray-900">
