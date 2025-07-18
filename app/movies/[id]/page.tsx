@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { useParams } from 'next/navigation';
 import Image from 'next/image';
 import { Star, Calendar, Clock, Heart, Bookmark, Play } from 'lucide-react';
+import PaginationBar from '../../components/PaginationBar';
 
 // Movie details type
 type MovieDetail = {
@@ -283,25 +284,7 @@ export default function MovieDetailPage() {
       </div>
 
       {/* Pagination Bar */}
-      <div className="w-full flex justify-center items-center py-6 bg-gray-900">
-        <nav className="flex items-center gap-2">
-          <button className="p-2 rounded-full bg-gray-800 text-white hover:bg-purple-600 transition-colors" aria-label="Previous Page">
-            <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="15 18 9 12 15 6" /></svg>
-          </button>
-          {/* Example: 6 pages, highlight current */}
-          {[1,2,3,4,5,6].map(pageNum => (
-            <button
-              key={pageNum}
-              className={`px-3 py-1 rounded-full text-sm font-semibold transition-colors ${pageNum === movie.id ? 'bg-purple-600 text-white' : 'bg-gray-800 text-gray-300 hover:bg-purple-700 hover:text-white'}`}
-            >
-              {pageNum}
-            </button>
-          ))}
-          <button className="p-2 rounded-full bg-gray-800 text-white hover:bg-purple-600 transition-colors" aria-label="Next Page">
-            <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="9 6 15 12 9 18" /></svg>
-          </button>
-        </nav>
-      </div>
+      <PaginationBar currentId={movie.id} basePath="/movies" />
     </div>
   );
 }
