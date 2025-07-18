@@ -84,12 +84,6 @@ export default function Home() {
               All Movies
             </Link>
             <Link
-              href="/movies/search"
-              className="bg-gray-800 hover:bg-gray-700 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg transition-colors text-sm sm:text-base"
-            >
-              Search Movies
-            </Link>
-            <Link
               href="/favorites"
               className="bg-gray-800 hover:bg-gray-700 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg transition-colors text-sm sm:text-base"
             >
