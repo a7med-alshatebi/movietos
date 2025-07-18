@@ -64,6 +64,13 @@ export default function Navigation() {
             >
               <Home size={22} />
             </Link>
+            <Link
+              href="/movies/search"
+              className="text-gray-300 hover:text-purple-400 p-2 rounded-full transition-colors"
+              aria-label="Search Movies"
+            >
+              <Search size={22} />
+            </Link>
             <button
               className="text-gray-300 hover:text-white p-2"
               onClick={() => setSidebarOpen(true)}
