@@ -55,8 +55,15 @@ export default function Navigation() {
             })}
           </div>
 
-          {/* Mobile menu button */}
-          <div className="md:hidden">
+          {/* Mobile actions: Back to Home + menu button */}
+          <div className="md:hidden flex items-center gap-2">
+            <Link
+              href="/"
+              className="text-gray-300 hover:text-purple-400 p-2 rounded-full transition-colors"
+              aria-label="Back to Home"
+            >
+              <Home size={22} />
+            </Link>
             <button
               className="text-gray-300 hover:text-white p-2"
               onClick={() => setSidebarOpen(true)}
