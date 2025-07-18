@@ -209,12 +209,12 @@ export default function TrendingPage() {
 
 										{/* Action Buttons */}
 										<div className="flex space-x-4">
-											<Link
-												href={`/movies/${movie.id}`}
-												className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-lg transition-colors"
-											>
-												View Details
-											</Link>
+						<Link
+  					href={`/movies/trending/${movie.id}`}
+  					className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-lg transition-colors"
+					>
+ 				 View Details
+						</Link>
 											<button className="bg-gray-700 hover:bg-gray-600 text-white px-6 py-2 rounded-lg transition-colors">
 												Add to Watchlist
 											</button>
