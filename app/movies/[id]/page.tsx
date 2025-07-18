@@ -165,7 +165,7 @@ export default function MovieDetailPage() {
   return (
     <div className="min-h-screen bg-gray-900">
       {/* Backdrop */}
-      <div className="relative h-96 overflow-hidden">
+      <div className="relative h-64 sm:h-80 md:h-96 overflow-hidden">
         <Image
           src={movie.backdrop}
           alt={movie.title}
@@ -177,30 +177,29 @@ export default function MovieDetailPage() {
       </div>
 
       {/* Content */}
-      <div className="container mx-auto px-4 -mt-32 relative z-10">
-        <div className="flex flex-col lg:flex-row gap-8">
+      <div className="container mx-auto px-2 sm:px-4 -mt-24 sm:-mt-32 relative z-10">
+        <div className="flex flex-col lg:flex-row gap-6 sm:gap-8">
           {/* Poster */}
-          <div className="flex-shrink-0">
+          <div className="flex-shrink-0 mx-auto lg:mx-0 mb-6 lg:mb-0 w-48 sm:w-64 md:w-80">
             <Image
               src={movie.poster}
               alt={movie.title}
               width={400}
               height={600}
-              className="w-80 h-auto rounded-lg shadow-2xl"
+              className="w-full h-auto rounded-lg shadow-2xl"
             />
           </div>
 
           {/* Movie Info */}
           <div className="flex-1">
-            <h1 className="text-5xl font-bold text-white mb-4">{movie.title}</h1>
-            
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 break-words">{movie.title}</h1>
             {movie.tagline && (
-              <p className="text-xl text-gray-300 italic mb-6">{movie.tagline}</p>
+              <p className="text-base sm:text-xl text-gray-300 italic mb-6">{movie.tagline}</p>
             )}
 
             {/* Rating and Info */}
-            <div className="flex items-center space-x-6 mb-6">
-              <div className="flex items-center bg-yellow-600 text-white px-3 py-1 rounded-full">
+            <div className="flex flex-wrap items-center gap-4 sm:gap-6 mb-6">
+              <div className="flex items-center bg-yellow-600 text-white px-3 py-1 rounded-full mb-2 sm:mb-0">
                 <Star className="mr-1" size={20} />
                 <span className="font-semibold">{movie.rating}</span>
               </div>
@@ -222,15 +221,15 @@ export default function MovieDetailPage() {
 
             {/* Overview */}
             <div className="mb-6">
-              <h3 className="text-xl font-semibold text-white mb-3">Overview</h3>
-              <p className="text-gray-300 text-lg leading-relaxed">{movie.overview}</p>
+              <h3 className="text-lg sm:text-xl font-semibold text-white mb-3">Overview</h3>
+              <p className="text-gray-300 text-base sm:text-lg leading-relaxed">{movie.overview}</p>
             </div>
 
             {/* Action Buttons */}
-            <div className="flex flex-wrap gap-4 mb-8">
+            <div className="flex flex-wrap gap-2 sm:gap-4 mb-8">
               <button
                 onClick={toggleFavorite}
-                className={`flex items-center px-6 py-3 rounded-lg transition-colors ${
+                className={`flex items-center px-4 sm:px-6 py-2 sm:py-3 rounded-lg transition-colors ${
                   isFavorite 
                     ? 'bg-red-600 hover:bg-red-700 text-white' 
                     : 'bg-gray-800 hover:bg-gray-700 text-gray-300'
@@ -239,10 +238,9 @@ export default function MovieDetailPage() {
                 <Heart className="mr-2" size={20} fill={isFavorite ? 'currentColor' : 'none'} />
                 {isFavorite ? 'Remove from Favorites' : 'Add to Favorites'}
               </button>
-              
               <button
                 onClick={toggleWatchlist}
-                className={`flex items-center px-6 py-3 rounded-lg transition-colors ${
+                className={`flex items-center px-4 sm:px-6 py-2 sm:py-3 rounded-lg transition-colors ${
                   isInWatchlist 
                     ? 'bg-blue-600 hover:bg-blue-700 text-white' 
                     : 'bg-gray-800 hover:bg-gray-700 text-gray-300'
@@ -251,40 +249,58 @@ export default function MovieDetailPage() {
                 <Bookmark className="mr-2" size={20} fill={isInWatchlist ? 'currentColor' : 'none'} />
                 {isInWatchlist ? 'Remove from Watchlist' : 'Add to Watchlist'}
               </button>
-              
-              <button className="flex items-center bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg transition-colors">
+              <button className="flex items-center bg-purple-600 hover:bg-purple-700 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg transition-colors">
                 <Play className="mr-2" size={20} />
                 Watch Trailer
               </button>
             </div>
 
             {/* Cast and Crew */}
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
               <div>
-                <h3 className="text-xl font-semibold text-white mb-3">Director</h3>
+                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3">Director</h3>
                 <p className="text-gray-300">{movie.director}</p>
               </div>
-              
               <div>
-                <h3 className="text-xl font-semibold text-white mb-3">Cast</h3>
+                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3">Cast</h3>
                 <p className="text-gray-300">{movie.cast.join(', ')}</p>
               </div>
             </div>
 
             {/* Box Office */}
-            <div className="grid md:grid-cols-2 gap-8 mt-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mt-8">
               <div>
-                <h3 className="text-xl font-semibold text-white mb-3">Budget</h3>
+                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3">Budget</h3>
                 <p className="text-gray-300">{formatCurrency(movie.budget)}</p>
               </div>
-              
               <div>
-                <h3 className="text-xl font-semibold text-white mb-3">Revenue</h3>
+                <h3 className="text-lg sm:text-xl font-semibold text-white mb-3">Revenue</h3>
                 <p className="text-gray-300">{formatCurrency(movie.revenue)}</p>
               </div>
             </div>
           </div>
         </div>
+      </div>
+
+      {/* Pagination Bar */}
+      <div className="w-full flex justify-center items-center py-6 bg-gray-900">
+        <nav className="flex items-center gap-2">
+          <button className="p-2 rounded-full bg-gray-800 text-white hover:bg-purple-600 transition-colors" aria-label="Previous Page">
+            <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="15 18 9 12 15 6" /></svg>
+          </button>
+          {/* Example: 6 pages, highlight current */}
+          {[1,2,3,4,5,6].map(pageNum => (
+            <button
+              key={pageNum}
+              className={`px-3 py-1 rounded-full text-sm font-semibold transition-colors ${pageNum === movie.id ? 'bg-purple-600 text-white' : 'bg-gray-800 text-gray-300 hover:bg-purple-700 hover:text-white'}`}
+            >
+              {pageNum}
+            </button>
+          ))}
+          <button className="p-2 rounded-full bg-gray-800 text-white hover:bg-purple-600 transition-colors" aria-label="Next Page">
+            <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="9 6 15 12 9 18" /></svg>
+          </button>
+        </nav>
       </div>
     </div>
   );
