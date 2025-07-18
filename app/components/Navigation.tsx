@@ -1,6 +1,9 @@
-'use client';
+"use client";
 
-import React, { useState } from "react";
+
+import './Navigation.css';
+import './Navigation.css';
+import { useState } from 'react';
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Home, Search, Film, Star, Heart, Bookmark } from "lucide-react";
