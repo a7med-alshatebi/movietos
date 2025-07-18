@@ -109,12 +109,7 @@ export default function Navigation() {
             </nav>
           </div>
           {/* Click outside to close */}
-          <div
-            className="fixed inset-0 z-40 bg-transparent"
-            onClick={() => setSidebarOpen(false)}
-            aria-label="Close sidebar overlay"
-            style={{ cursor: 'pointer' }}
-          />
+          <div className="flex-1" onClick={() => setSidebarOpen(false)} />
         </div>
       )}
     </nav>
