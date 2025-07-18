@@ -69,8 +69,8 @@ export default function Navigation() {
 
       {/* Mobile Sidebar */}
       {sidebarOpen && (
-        <div className="fixed inset-0 z-50 bg-black bg-opacity-60 flex">
-          <div className="w-64 bg-gray-900 h-full shadow-lg flex flex-col p-6 animate-slide-in">
+        <div className="fixed inset-0 z-50 bg-black bg-opacity-60 flex justify-end">
+          <div className="w-64 bg-gray-900 h-full shadow-lg flex flex-col p-6 animate-slide-in-right">
             <div className="flex items-center justify-between mb-8">
               <span className="text-xl font-bold text-white">Menu</span>
               <button
