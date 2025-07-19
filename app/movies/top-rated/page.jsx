@@ -5,16 +5,6 @@ import { Star, Calendar, Clock } from "lucide-react";
 
 const topRatedMovies = [
   {
-    id: 1,
-    title: "The Dark Knight",
-    poster: "/batman.jpeg",
-    rating: 9.0,
-    year: 2008,
-    runtime: 152,
-    genre: "Action, Crime, Drama",
-    overview: "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.",
-  },
-  {
     id: 2,
     title: "Inception",
     poster: "/inception.jpeg",
@@ -33,16 +23,6 @@ const topRatedMovies = [
     runtime: 154,
     genre: "Crime, Drama",
     overview: "The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption.",
-  },
-  {
-    id: 4,
-    title: "Forrest Gump",
-    poster: "/forestgump.webp",
-    rating: 8.8,
-    year: 1994,
-    runtime: 142,
-    genre: "Drama, Romance",
-    overview: "The presidencies of Kennedy and Johnson, the Vietnam War, the Watergate scandal and other historical events unfold from the perspective of an Alabama man with an IQ of 75.",
   },
   {
     id: 5,
