@@ -85,13 +85,13 @@ export default function Home() {
             </Link>
             <Link
               href="/favorites"
-              className="bg-gray-800 hover:bg-red-500 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg transition-colors text-sm sm:text-base"
+              className="bg-gray-800 hover:bg-gray-700 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg transition-colors text-sm sm:text-base"
             >
               My Favorites
             </Link>
             <Link
               href="/watchlist"
-              className="bg-gray-800 hover:bg-blue-700 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg transition-colors text-sm sm:text-base"
+              className="bg-gray-800 hover:bg-gray-700 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg transition-colors text-sm sm:text-base"
             >
               Watch Later
             </Link>
