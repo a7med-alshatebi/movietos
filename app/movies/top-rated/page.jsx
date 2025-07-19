@@ -15,7 +15,7 @@ const topRatedMovies = [
     overview: "A thief who steals corporate secrets through dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O.",
   },
   {
-    id: 3,
+    id: 4,
     title: "Pulp Fiction",
     poster: "/pulpfiction.jpeg",
     rating: 8.9,
