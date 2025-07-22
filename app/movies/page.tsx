@@ -8,7 +8,7 @@ import { Star, Calendar, Clock } from 'lucide-react';
 // Mock data for movies (in a real app, you'd fetch from an API like TMDB)
 const mockMovies = [
   {
-    id: 1,
+    id: "the-dark-knight",
     title: "The Dark Knight",
     poster: "/batman.jpeg",
     rating: 9.0,
@@ -18,7 +18,7 @@ const mockMovies = [
     overview: "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice."
   },
   {
-    id: 2,
+    id: "inception",
     title: "Inception",
     poster: "/inception.jpeg",
     rating: 8.8,
@@ -28,7 +28,7 @@ const mockMovies = [
     overview: "A thief who steals corporate secrets through dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O."
   },
   {
-    id: 3,
+    id: "interstellar",
     title: "Interstellar",
     poster: "/interstller.jpeg",
     rating: 8.6,
@@ -38,7 +38,7 @@ const mockMovies = [
     overview: "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival."
   },
   {
-    id: 4,
+    id: "pulp-fiction",
     title: "Pulp Fiction",
     poster: "/pulpfiction.jpeg",
     rating: 8.9,
@@ -48,7 +48,7 @@ const mockMovies = [
     overview: "The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption."
   },
   {
-    id: 5,
+    id: "the-matrix",
     title: "The Matrix",
     poster: "/thematrix.jpeg",
     rating: 8.7,
@@ -58,7 +58,7 @@ const mockMovies = [
     overview: "A computer programmer is led to fight an underground war against powerful computers who have constructed his entire reality with a system called the Matrix."
   },
   {
-    id: 6,
+    id: "forrest-gump",
     title: "Forrest Gump",
     poster: "/forestgump.webp",
     rating: 8.8,
