@@ -233,6 +233,22 @@ const mockMovieDetails: { [key: string]: MovieDetail } = {
   }
 };
 
+// Mapping numeric IDs to slugs for pagination
+const idToSlugMap: { [key: number]: string } = {
+  1: "the-dark-knight",
+  2: "inception", 
+  3: "interstellar",
+  4: "pulp-fiction",
+  5: "the-matrix",
+  6: "forrest-gump",
+  7: "top-gun-maverick",
+  8: "black-panther",
+  9: "avatar-the-way-of-water",
+  10: "goodfellas",
+  11: "doctor-strange",
+  12: "minions"
+};
+
 export default function MovieDetailPage() {
   const params = useParams();
   const id = Array.isArray(params.id) ? params.id[0] : params.id;
@@ -386,7 +402,12 @@ export default function MovieDetailPage() {
       </div>
 
       {/* Pagination Bar */}
-      <PaginationBar currentId={movie.id} basePath="/movies" />
+      <PaginationBar 
+        currentId={movie.id} 
+        basePath="/movies" 
+        totalPages={12}
+        idToSlugMap={idToSlugMap}
+      />
     </div>
   );
 }

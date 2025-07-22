@@ -5,17 +5,25 @@ interface PaginationBarProps {
   currentId: number | string;
   totalPages?: number;
   basePath: string;
+  idToSlugMap?: { [key: number]: string };
 }
 
-export default function PaginationBar({ currentId, totalPages = 6, basePath }: PaginationBarProps) {
-  const id = Number(currentId);
+export default function PaginationBar({ currentId, totalPages = 12, basePath, idToSlugMap }: PaginationBarProps) {
+  const numericId = typeof currentId === 'string' ? parseInt(currentId) || 1 : currentId;
+  
+  // Helper function to get the correct path (slug or numeric)
+  const getPath = (pageNum: number) => {
+    if (idToSlugMap && idToSlugMap[pageNum]) {
+      return `${basePath}/${idToSlugMap[pageNum]}`;
+    }
+    return `${basePath}/${pageNum}`;
+  };
 
   return (
-
     <div className="w-full flex justify-center items-center py-6 bg-gray-900">
       <nav className="flex items-center gap-2">
         <Link
-          href={`${basePath}/${id > 1 ? id - 1 : 1}`}
+          href={getPath(numericId > 1 ? numericId - 1 : 1)}
           className="p-2 rounded-full bg-gray-800 text-white hover:bg-purple-600 transition-colors"
           aria-label="Previous Page"
         >
@@ -26,15 +34,15 @@ export default function PaginationBar({ currentId, totalPages = 6, basePath }: P
           return (
             <Link
               key={pageNum}
-              href={`${basePath}/${pageNum}`}
-              className={`px-3 py-1 rounded-full text-sm font-semibold transition-colors ${pageNum === id ? 'bg-purple-600 text-white' : 'bg-gray-800 text-gray-300 hover:bg-purple-700 hover:text-white'}`}
+              href={getPath(pageNum)}
+              className={`px-3 py-1 rounded-full text-sm font-semibold transition-colors ${pageNum === numericId ? 'bg-purple-600 text-white' : 'bg-gray-800 text-gray-300 hover:bg-purple-700 hover:text-white'}`}
             >
               {pageNum}
             </Link>
           );
         })}
         <Link
-          href={`${basePath}/${id < totalPages ? id + 1 : totalPages}`}
+          href={getPath(numericId < totalPages ? numericId + 1 : totalPages)}
           className="p-2 rounded-full bg-gray-800 text-white hover:bg-purple-600 transition-colors"
           aria-label="Next Page"
         >
