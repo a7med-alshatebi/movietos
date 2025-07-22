@@ -8,7 +8,7 @@ import { Bookmark, Star, Calendar, Clock, Check, X } from 'lucide-react';
 // Mock data for watchlist movies
 const mockWatchlistMovies = [
   {
-    id: 4,
+    id: "pulp-fiction",
     title: "Pulp Fiction",
     poster: "/pulpfiction.jpeg",
     rating: 8.9,
@@ -20,7 +20,7 @@ const mockWatchlistMovies = [
     priority: "high"
   },
   {
-    id: 5,
+    id: "the-matrix",
     title: "The Matrix",
     poster: "/thematrix.jpeg",
     rating: 8.7,
@@ -32,7 +32,7 @@ const mockWatchlistMovies = [
     priority: "medium"
   },
   {
-    id: 6,
+    id: "forrest-gump",
     title: "Forrest Gump",
     poster: "/forestgump.webp",
     rating: 8.8,
@@ -44,7 +44,7 @@ const mockWatchlistMovies = [
     priority: "low"
   },
   {
-    id: 7,
+    id: "goodfellas",
     title: "Goodfellas",
     poster: "/goodfelas.jpeg",
     rating: 8.7,
@@ -62,17 +62,17 @@ export default function WatchlistPage() {
   const [sortBy, setSortBy] = useState('dateAdded');
   const [filterBy, setFilterBy] = useState('all');
 
-  const handleRemoveFromWatchlist = (movieId: number) => {
+  const handleRemoveFromWatchlist = (movieId: string) => {
     setWatchlist(watchlist.filter(movie => movie.id !== movieId));
   };
 
-  const handleMarkAsWatched = (movieId: number) => {
+  const handleMarkAsWatched = (movieId: string) => {
     if (window.confirm('Mark this movie as watched and remove from watchlist?')) {
       handleRemoveFromWatchlist(movieId);
     }
   };
 
-  const handlePriorityChange = (movieId: number, newPriority: string) => {
+  const handlePriorityChange = (movieId: string, newPriority: string) => {
     setWatchlist(watchlist.map(movie => 
       movie.id === movieId 
         ? { ...movie, priority: newPriority }

@@ -8,7 +8,7 @@ import { Heart, Star, Calendar, Clock, Trash2 } from 'lucide-react';
 // Mock data for favorite movies
 const mockFavoriteMovies = [
   {
-    id: 1,
+    id: "the-dark-knight",
     title: "The Dark Knight",
     poster: "/batman.jpeg",
     rating: 9.0,
@@ -19,7 +19,7 @@ const mockFavoriteMovies = [
     dateAdded: "2024-01-15"
   },
   {
-    id: 2,
+    id: "inception",
     title: "Inception",
     poster: "/inception.jpeg",
     rating: 8.8,
@@ -30,7 +30,7 @@ const mockFavoriteMovies = [
     dateAdded: "2024-01-10"
   },
   {
-    id: 3,
+    id: "interstellar",
     title: "Interstellar",
     poster: "/interstller.jpeg",
     rating: 8.6,
@@ -46,7 +46,7 @@ export default function FavoritesPage() {
   const [favorites, setFavorites] = useState(mockFavoriteMovies);
   const [sortBy, setSortBy] = useState('dateAdded');
 
-  const handleRemoveFromFavorites = (movieId: number) => {
+  const handleRemoveFromFavorites = (movieId: string) => {
     setFavorites(favorites.filter(movie => movie.id !== movieId));
   };
 
