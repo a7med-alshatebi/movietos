@@ -66,6 +66,66 @@ const mockMovies = [
     runtime: 142,
     genre: "Drama, Romance",
     overview: "The presidencies of Kennedy and Johnson, the Vietnam War, the Watergate scandal and other historical events unfold from the perspective of an Alabama man with an IQ of 75."
+  },
+  {
+    id: "top-gun-maverick",
+    title: "Top Gun: Maverick",
+    poster: "/topgun.jpeg",
+    rating: 8.3,
+    year: 2022,
+    runtime: 130,
+    genre: "Action, Drama",
+    overview: "After thirty years, Maverick is still pushing the envelope as a top naval aviator, but must confront ghosts of his past when he leads TOP GUN's elite graduates on a mission that demands the ultimate sacrifice from those chosen to fly it."
+  },
+  {
+    id: "black-panther",
+    title: "Black Panther",
+    poster: "/blackpanther.jpeg",
+    rating: 7.3,
+    year: 2018,
+    runtime: 134,
+    genre: "Action, Adventure, Sci-Fi",
+    overview: "T'Challa, heir to the hidden but advanced kingdom of Wakanda, must step forward to lead his people into a new future and must confront a challenger from his country's past."
+  },
+  {
+    id: "avatar-the-way-of-water",
+    title: "Avatar: The Way of Water",
+    poster: "/avatarthewayofwater.jpeg",
+    rating: 7.6,
+    year: 2022,
+    runtime: 192,
+    genre: "Action, Adventure, Fantasy",
+    overview: "Set more than a decade after the events of the first film, Avatar: The Way of Water begins to tell the story of the Sully family."
+  },
+  {
+    id: "goodfellas",
+    title: "Goodfellas",
+    poster: "/goodfelas.jpeg",
+    rating: 8.7,
+    year: 1990,
+    runtime: 146,
+    genre: "Biography, Crime, Drama",
+    overview: "The story of Henry Hill and his life in the mob, covering his relationship with his wife Karen Hill and his mob partners Jimmy Conway and Tommy DeVito."
+  },
+  {
+    id: "doctor-strange",
+    title: "Doctor Strange",
+    poster: "/doctorstranger.jpeg",
+    rating: 7.5,
+    year: 2016,
+    runtime: 115,
+    genre: "Action, Adventure, Fantasy",
+    overview: "While on a journey of physical and spiritual healing, a brilliant neurosurgeon is drawn into the world of the mystic arts."
+  },
+  {
+    id: "minions",
+    title: "Minions",
+    poster: "/minions.jpeg",
+    rating: 6.4,
+    year: 2015,
+    runtime: 91,
+    genre: "Animation, Adventure, Comedy",
+    overview: "Minions Stuart, Kevin, and Bob are recruited by Scarlet Overkill, a supervillain who, alongside her inventor husband Herb, hatches a plot to take over the world."
   }
 ];
 
