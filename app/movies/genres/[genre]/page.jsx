@@ -10,7 +10,7 @@ import { Star, Calendar, Clock, ArrowLeft } from "lucide-react";
 const moviesByGenre = {
   action: [
     {
-      id: 1,
+      id: "the-dark-knight",
       title: "The Dark Knight",
       poster: "/batman.jpeg",
       rating: 9.0,
@@ -19,7 +19,7 @@ const moviesByGenre = {
       overview: "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.",
     },
     {
-      id: 2,
+      id: "top-gun-maverick",
       title: "Top Gun: Maverick",
       poster: "/topgun.jpeg",
       rating: 8.3,
@@ -28,7 +28,7 @@ const moviesByGenre = {
       overview: "After thirty years, Maverick is still pushing the envelope as a top naval aviator, but must confront ghosts of his past when he leads TOP GUN's elite graduates on a mission that demands the ultimate sacrifice from those chosen to fly it.",
     },
     {
-      id: 3,
+      id: "black-panther",
       title: "Black Panther",
       poster: "/blackpanther.jpeg",
       rating: 7.3,
@@ -39,7 +39,7 @@ const moviesByGenre = {
   ],
   adventure: [
     {
-      id: 4,
+      id: "avatar-the-way-of-water",
       title: "Avatar: The Way of Water",
       poster: "/avatarthewayofwater.jpeg",
       rating: 7.6,
@@ -48,7 +48,7 @@ const moviesByGenre = {
       overview: "Set more than a decade after the events of the first film, Avatar: The Way of Water begins to tell the story of the Sully family.",
     },
     {
-      id: 5,
+      id: "interstellar",
       title: "Interstellar",
       poster: "/interstller.jpeg",
       rating: 8.6,
@@ -59,7 +59,7 @@ const moviesByGenre = {
   ],
   drama: [
     {
-      id: 6,
+      id: "forrest-gump",
       title: "Forrest Gump",
       poster: "/forestgump.webp",
       rating: 8.8,
@@ -68,7 +68,7 @@ const moviesByGenre = {
       overview: "The presidencies of Kennedy and Johnson, the Vietnam War, the Watergate scandal and other historical events unfold from the perspective of an Alabama man with an IQ of 75.",
     },
     {
-      id: 7,
+      id: "goodfellas",
       title: "Goodfellas",
       poster: "/goodfelas.jpeg",
       rating: 8.7,
@@ -77,7 +77,7 @@ const moviesByGenre = {
       overview: "The story of Henry Hill and his life in the mob, covering his relationship with his wife Karen Hill and his mob partners Jimmy Conway and Tommy DeVito.",
     },
     {
-      id: 8,
+      id: "pulp-fiction",
       title: "Pulp Fiction",
       poster: "/pulpfiction.jpeg",
       rating: 8.9,
@@ -88,7 +88,7 @@ const moviesByGenre = {
   ],
   "sci-fi": [
     {
-      id: 9,
+      id: "inception",
       title: "Inception",
       poster: "/inception.jpeg",
       rating: 8.8,
@@ -97,7 +97,7 @@ const moviesByGenre = {
       overview: "A thief who steals corporate secrets through dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O.",
     },
     {
-      id: 10,
+      id: "the-matrix",
       title: "The Matrix",
       poster: "/thematrix.jpeg",
       rating: 8.7,
@@ -106,7 +106,7 @@ const moviesByGenre = {
       overview: "A computer programmer is led to fight an underground war against powerful computers who have constructed his entire reality with a system called the Matrix.",
     },
     {
-      id: 11,
+      id: "doctor-strange",
       title: "Doctor Strange",
       poster: "/doctorstranger.jpeg",
       rating: 7.5,
@@ -117,7 +117,7 @@ const moviesByGenre = {
   ],
   crime: [
     {
-      id: 12,
+      id: "goodfellas",
       title: "Goodfellas",
       poster: "/goodfelas.jpeg",
       rating: 8.7,
@@ -126,7 +126,7 @@ const moviesByGenre = {
       overview: "The story of Henry Hill and his life in the mob, covering his relationship with his wife Karen Hill and his mob partners Jimmy Conway and Tommy DeVito.",
     },
     {
-      id: 13,
+      id: "pulp-fiction",
       title: "Pulp Fiction",
       poster: "/pulpfiction.jpeg",
       rating: 8.9,
@@ -137,7 +137,7 @@ const moviesByGenre = {
   ],
   romance: [
     {
-      id: 14,
+      id: "forrest-gump",
       title: "Forrest Gump",
       poster: "/forestgump.webp",
       rating: 8.8,
@@ -148,7 +148,7 @@ const moviesByGenre = {
   ],
   comedy: [
     {
-      id: 15,
+      id: "minions",
       title: "Minions",
       poster: "/minions.jpeg",
       rating: 6.4,
@@ -159,7 +159,7 @@ const moviesByGenre = {
   ],
   animation: [
     {
-      id: 16,
+      id: "minions",
       title: "Minions",
       poster: "/minions.jpeg",
       rating: 6.4,
@@ -170,7 +170,7 @@ const moviesByGenre = {
   ],
   fantasy: [
     {
-      id: 17,
+      id: "doctor-strange",
       title: "Doctor Strange",
       poster: "/doctorstranger.jpeg",
       rating: 7.5,

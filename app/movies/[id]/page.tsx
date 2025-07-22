@@ -27,7 +27,7 @@ type MovieDetail = {
 
 // Mock data for movie details
 const mockMovieDetails: { [key: string]: MovieDetail } = {
-  "1": {
+  "the-dark-knight": {
     id: 1,
     title: "The Dark Knight",
     poster: "/batman.jpeg",
@@ -44,10 +44,10 @@ const mockMovieDetails: { [key: string]: MovieDetail } = {
     tagline: "Welcome to a world without rules.",
     trailerUrl: "https://www.youtube.com/watch?v=EXeTwQWrcwY"
   },
-  "2": {
+  "inception": {
     id: 2,
     title: "Inception",
-    poster: "/inception.jpeg",        
+    poster: "/inception.jpeg",
     backdrop: "/inception.jpeg",
     rating: 8.8,
     year: 2010,
@@ -61,7 +61,7 @@ const mockMovieDetails: { [key: string]: MovieDetail } = {
     tagline: "Your mind is the scene of the crime.",
     trailerUrl: "https://www.youtube.com/watch?v=YoHD9XEInc0"
   },
-  "3": {
+  "interstellar": {
     id: 3,
     title: "Interstellar",
     poster: "/interstller.jpeg",
@@ -78,7 +78,7 @@ const mockMovieDetails: { [key: string]: MovieDetail } = {
     tagline: "Mankind was born on Earth. It was never meant to die here.",
     trailerUrl: "https://www.youtube.com/watch?v=zSWdZVtXT0"
   },
-  "4": {
+  "pulp-fiction": {
     id: 4,
     title: "Pulp Fiction",
     poster: "/pulpfiction.jpeg",
@@ -95,7 +95,7 @@ const mockMovieDetails: { [key: string]: MovieDetail } = {
     tagline: "Just because you are a character doesn't mean that you have character.",
     trailerUrl: "https://www.youtube.com/watch?v=s7EdQ4Fq9l"
   },
-  "5": {
+  "the-matrix": {
     id: 5,
     title: "The Matrix",
     poster: "/thematrix.jpeg",
@@ -112,7 +112,7 @@ const mockMovieDetails: { [key: string]: MovieDetail } = {
     tagline: "Welcome to the Real World.",
     trailerUrl: "https://www.youtube.com/watch?v=vKQi3bpI38"
   },
-  "6": {
+  "forrest-gump": {
     id: 6,
     title: "Forrest Gump",
     poster: "/forestgump.webp",
@@ -128,13 +128,115 @@ const mockMovieDetails: { [key: string]: MovieDetail } = {
     revenue: 678226554,
     tagline: "Life is like a box of chocolates. You never know what you're gonna get.",
     trailerUrl: "https://www.youtube.com/watch?v=bLvqoHBptjg"
+  },
+  "top-gun-maverick": {
+    id: 7,
+    title: "Top Gun: Maverick",
+    poster: "/topgun.jpeg",
+    backdrop: "/topgun.jpeg",
+    rating: 8.3,
+    year: 2022,
+    runtime: 130,
+    genre: "Action, Drama",
+    director: "Joseph Kosinski",
+    cast: ["Tom Cruise", "Miles Teller", "Jennifer Connelly", "Jon Hamm"],
+    overview: "After thirty years, Maverick is still pushing the envelope as a top naval aviator, but must confront ghosts of his past when he leads TOP GUN's elite graduates on a mission that demands the ultimate sacrifice from those chosen to fly it.",
+    budget: 170000000,
+    revenue: 1488732821,
+    tagline: "Feel the need... The need for speed.",
+    trailerUrl: "https://www.youtube.com/watch?v=qSqVVswa420"
+  },
+  "black-panther": {
+    id: 8,
+    title: "Black Panther",
+    poster: "/blackpanther.jpeg",
+    backdrop: "/blackpanther.jpeg",
+    rating: 7.3,
+    year: 2018,
+    runtime: 134,
+    genre: "Action, Adventure, Sci-Fi",
+    director: "Ryan Coogler",
+    cast: ["Chadwick Boseman", "Michael B. Jordan", "Lupita Nyong'o", "Danai Gurira"],
+    overview: "T'Challa, heir to the hidden but advanced kingdom of Wakanda, must step forward to lead his people into a new future and must confront a challenger from his country's past.",
+    budget: 200000000,
+    revenue: 1346913161,
+    tagline: "Long live the king.",
+    trailerUrl: "https://www.youtube.com/watch?v=xjDjIWPwcPU"
+  },
+  "avatar-the-way-of-water": {
+    id: 9,
+    title: "Avatar: The Way of Water",
+    poster: "/avatarthewayofwater.jpeg",
+    backdrop: "/avatarthewayofwater.jpeg",
+    rating: 7.6,
+    year: 2022,
+    runtime: 192,
+    genre: "Action, Adventure, Fantasy",
+    director: "James Cameron",
+    cast: ["Sam Worthington", "Zoe Saldana", "Sigourney Weaver", "Stephen Lang"],
+    overview: "Set more than a decade after the events of the first film, Avatar: The Way of Water begins to tell the story of the Sully family.",
+    budget: 460000000,
+    revenue: 2320250281,
+    tagline: "Return to Pandora.",
+    trailerUrl: "https://www.youtube.com/watch?v=d9MyW72ELq0"
+  },
+  "goodfellas": {
+    id: 10,
+    title: "Goodfellas",
+    poster: "/goodfelas.jpeg",
+    backdrop: "/goodfelas.jpeg",
+    rating: 8.7,
+    year: 1990,
+    runtime: 146,
+    genre: "Biography, Crime, Drama",
+    director: "Martin Scorsese",
+    cast: ["Robert De Niro", "Ray Liotta", "Joe Pesci", "Lorraine Bracco"],
+    overview: "The story of Henry Hill and his life in the mob, covering his relationship with his wife Karen Hill and his mob partners Jimmy Conway and Tommy DeVito.",
+    budget: 25000000,
+    revenue: 46836394,
+    tagline: "Three Decades of Life in the Mafia.",
+    trailerUrl: "https://www.youtube.com/watch?v=qo5jJpHtI2Y"
+  },
+  "doctor-strange": {
+    id: 11,
+    title: "Doctor Strange",
+    poster: "/doctorstranger.jpeg",
+    backdrop: "/doctorstranger.jpeg",
+    rating: 7.5,
+    year: 2016,
+    runtime: 115,
+    genre: "Action, Adventure, Fantasy",
+    director: "Scott Derrickson",
+    cast: ["Benedict Cumberbatch", "Chiwetel Ejiofor", "Rachel McAdams", "Benedict Wong"],
+    overview: "While on a journey of physical and spiritual healing, a brilliant neurosurgeon is drawn into the world of the mystic arts.",
+    budget: 165000000,
+    revenue: 677796076,
+    tagline: "Open your mind. Change your reality.",
+    trailerUrl: "https://www.youtube.com/watch?v=HSzx-zryEgM"
+  },
+  "minions": {
+    id: 12,
+    title: "Minions",
+    poster: "/minions.jpeg",
+    backdrop: "/minions.jpeg",
+    rating: 6.4,
+    year: 2015,
+    runtime: 91,
+    genre: "Animation, Adventure, Comedy",
+    director: "Kyle Balda, Pierre Coffin",
+    cast: ["Sandra Bullock", "Jon Hamm", "Michael Keaton", "Allison Janney"],
+    overview: "Minions Stuart, Kevin, and Bob are recruited by Scarlet Overkill, a supervillain who, alongside her inventor husband Herb, hatches a plot to take over the world.",
+    budget: 74000000,
+    revenue: 1159444662,
+    tagline: "Before Gru, they had a history of bad bosses.",
+    trailerUrl: "https://www.youtube.com/watch?v=eisKxhjBnZ0"
   }
 };
 
 export default function MovieDetailPage() {
   const params = useParams();
   const id = Array.isArray(params.id) ? params.id[0] : params.id;
-  const movie = mockMovieDetails[id?.toString() || "1"];
+  const movie = mockMovieDetails[id?.toString() || "the-dark-knight"];
   const [isFavorite, setIsFavorite] = useState(false);
   const [isInWatchlist, setIsInWatchlist] = useState(false);
 
