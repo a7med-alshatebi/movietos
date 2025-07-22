@@ -7,7 +7,7 @@ import { Search, Star, Calendar, Clock, Filter } from 'lucide-react';
 
 // Define the Movie type
 interface Movie {
-  id: number;
+  id: string;
   title: string;
   poster: string;
   rating: number;
@@ -20,7 +20,7 @@ interface Movie {
 // Mock data for search results
 const mockSearchResults: Movie[] = [
   {
-    id: 1,
+    id: "the-dark-knight",
     title: "The Dark Knight",
     poster: "/batman.jpeg",
     rating: 9.0,
@@ -30,7 +30,7 @@ const mockSearchResults: Movie[] = [
     overview: "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice."
   },
   {
-    id: 2,
+    id: "inception",
     title: "Inception",
     poster: "/inception.jpeg",
     rating: 8.8,
@@ -40,7 +40,7 @@ const mockSearchResults: Movie[] = [
     overview: "A thief who steals corporate secrets through dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O."
   },
   {
-    id: 3,
+    id: "interstellar",
     title: "Interstellar",
     poster: "/interstller.jpeg",
     rating: 8.6,
@@ -50,7 +50,7 @@ const mockSearchResults: Movie[] = [
     overview: "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival."
   },
   {
-    id: 4,
+    id: "pulp-fiction",
     title: "Pulp Fiction",
     poster: "/pulpfiction.jpeg",
     rating: 8.9,
@@ -60,7 +60,7 @@ const mockSearchResults: Movie[] = [
     overview: "The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption."
   },
   {
-    id: 5,
+    id: "the-matrix",
     title: "The Matrix",
     poster: "/thematrix.jpeg",
     rating: 8.7,
@@ -70,7 +70,7 @@ const mockSearchResults: Movie[] = [
     overview: "A computer programmer is led to fight an underground war against powerful computers who have constructed his entire reality with a system called the Matrix."
   },
   {
-    id: 6,
+    id: "forrest-gump",
     title: "Forrest Gump",
     poster: "/forestgump.webp",
     rating: 8.8,
@@ -78,6 +78,66 @@ const mockSearchResults: Movie[] = [
     runtime: 142,
     genre: "Drama, Romance",
     overview: "The presidencies of Kennedy and Johnson, the Vietnam War, the Watergate scandal and other historical events unfold from the perspective of an Alabama man with an IQ of 75."
+  },
+  {
+    id: "top-gun-maverick",
+    title: "Top Gun: Maverick",
+    poster: "/topgun.jpeg",
+    rating: 8.3,
+    year: 2022,
+    runtime: 130,
+    genre: "Action, Drama",
+    overview: "After thirty years, Maverick is still pushing the envelope as a top naval aviator, but must confront ghosts of his past when he leads TOP GUN's elite graduates on a mission that demands the ultimate sacrifice from those chosen to fly it."
+  },
+  {
+    id: "black-panther",
+    title: "Black Panther",
+    poster: "/blackpanther.jpeg",
+    rating: 7.3,
+    year: 2018,
+    runtime: 134,
+    genre: "Action, Adventure, Sci-Fi",
+    overview: "T'Challa, heir to the hidden but advanced kingdom of Wakanda, must step forward to lead his people into a new future and must confront a challenger from his country's past."
+  },
+  {
+    id: "avatar-the-way-of-water",
+    title: "Avatar: The Way of Water",
+    poster: "/avatarthewayofwater.jpeg",
+    rating: 7.6,
+    year: 2022,
+    runtime: 192,
+    genre: "Action, Adventure, Fantasy",
+    overview: "Set more than a decade after the events of the first film, Avatar: The Way of Water begins to tell the story of the Sully family."
+  },
+  {
+    id: "goodfellas",
+    title: "Goodfellas",
+    poster: "/goodfelas.jpeg",
+    rating: 8.7,
+    year: 1990,
+    runtime: 146,
+    genre: "Biography, Crime, Drama",
+    overview: "The story of Henry Hill and his life in the mob, covering his relationship with his wife Karen Hill and his mob partners Jimmy Conway and Tommy DeVito."
+  },
+  {
+    id: "doctor-strange",
+    title: "Doctor Strange",
+    poster: "/doctorstranger.jpeg",
+    rating: 7.5,
+    year: 2016,
+    runtime: 115,
+    genre: "Action, Adventure, Fantasy",
+    overview: "While on a journey of physical and spiritual healing, a brilliant neurosurgeon is drawn into the world of the mystic arts."
+  },
+  {
+    id: "minions",
+    title: "Minions",
+    poster: "/minions.jpeg",
+    rating: 6.4,
+    year: 2015,
+    runtime: 91,
+    genre: "Animation, Adventure, Comedy",
+    overview: "Minions Stuart, Kevin, and Bob are recruited by Scarlet Overkill, a supervillain who, alongside her inventor husband Herb, hatches a plot to take over the world."
   }
 ];
 
