@@ -20,7 +20,7 @@ interface FavoriteButtonProps {
   showText?: boolean;
 }
 
-export default function FavoriteButton({ movie, className = '', showText = false }: FavoriteButtonProps) {
+export default function FavoriteButton({ movie, className = '', showText = true }: FavoriteButtonProps) {
   const { addToFavorites, removeFromFavorites, isFavorite } = useFavorites();
   const movieId = String(movie.id);
   const isMovieFavorite = isFavorite(movieId);

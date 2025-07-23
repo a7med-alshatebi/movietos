@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Star, Calendar, Clock } from "lucide-react";
 import FavoriteButton from "../../components/FavoriteButton";
+import WatchlistButton from "../../components/WatchlistButton";
 
 const topRatedMovies = [
   {
@@ -53,12 +54,6 @@ export default function TopRatedPage() {
                   height={600}
                   className="w-full h-64 object-cover"
                 />
-                <div className="absolute bottom-2 right-2">
-                  <FavoriteButton 
-                    movie={movie} 
-                    className="p-2 rounded-full bg-black/70 hover:bg-black/80" 
-                  />
-                </div>
               </div>
               <div className="p-6">
                 <h2 className="text-2xl font-bold text-white mb-2">{movie.title}</h2>
@@ -78,12 +73,26 @@ export default function TopRatedPage() {
                 </div>
                 <p className="text-gray-400 text-sm mb-4">{movie.genre}</p>
                 <p className="text-gray-300 mb-4">{movie.overview}</p>
-                <Link
-                  href={`/movies/${movie.id}`}
-                  className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-lg transition-colors"
-                >
-                  View Details
-                </Link>
+                <div className="flex flex-col gap-2">
+                  <div className="flex gap-2">
+                    <FavoriteButton 
+                      movie={movie} 
+                      className="flex-1 px-3 py-2 rounded-lg text-sm"
+                      showText={true}
+                    />
+                    <WatchlistButton 
+                      movie={movie} 
+                      className="flex-1 px-3 py-2 rounded-lg text-sm"
+                      showText={true}
+                    />
+                  </div>
+                  <Link
+                    href={`/movies/${movie.id}`}
+                    className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-lg transition-colors text-center"
+                  >
+                    View Details
+                  </Link>
+                </div>
               </div>
             </div>
           ))}

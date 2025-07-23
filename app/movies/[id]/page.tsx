@@ -338,7 +338,11 @@ export default function MovieDetailPage() {
 
             {/* Action Buttons */}
             <div className="flex flex-wrap gap-2 sm:gap-4 mb-8">
-              <FavoriteButton movie={movie} />
+              <FavoriteButton 
+                movie={movie} 
+                className="flex items-center px-4 sm:px-6 py-2 sm:py-3 rounded-lg transition-colors"
+                showText={true}
+              />
               <WatchlistButton 
                 movie={movie} 
                 className="flex items-center px-4 sm:px-6 py-2 sm:py-3 rounded-lg transition-colors"

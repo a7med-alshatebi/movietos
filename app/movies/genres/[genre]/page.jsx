@@ -6,6 +6,7 @@ import Image from "next/image";
 import { useParams } from "next/navigation";
 import { Star, Calendar, Clock, ArrowLeft } from "lucide-react";
 import FavoriteButton from "../../../components/FavoriteButton";
+import WatchlistButton from "../../../components/WatchlistButton";
 
 // Sample movie data organized by genre
 const moviesByGenre = {
@@ -234,12 +235,6 @@ export default function GenreMoviesPage() {
                     height={450}
                     className="w-full h-64 object-cover"
                   />
-                  <div className="absolute bottom-2 right-2">
-                    <FavoriteButton 
-                      movie={movie} 
-                      className="p-2 rounded-full bg-black/70 hover:bg-black/80" 
-                    />
-                  </div>
                 </div>
                 <div className="p-4">
                   <h2 className="text-xl font-bold text-white mb-2 line-clamp-2">
@@ -262,12 +257,26 @@ export default function GenreMoviesPage() {
                   <p className="text-gray-400 text-sm mb-4 line-clamp-3">
                     {movie.overview}
                   </p>
-                  <Link
-                    href={`/movies/${movie.id}`}
-                    className="w-full block text-center bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-lg transition-colors"
-                  >
-                    View Details
-                  </Link>
+                  <div className="flex flex-col gap-2">
+                    <div className="flex gap-2">
+                      <FavoriteButton 
+                        movie={movie} 
+                        className="flex-1 px-3 py-2 rounded-lg text-sm"
+                        showText={true}
+                      />
+                      <WatchlistButton 
+                        movie={movie} 
+                        className="flex-1 px-3 py-2 rounded-lg text-sm"
+                        showText={true}
+                      />
+                    </div>
+                    <Link
+                      href={`/movies/${movie.id}`}
+                      className="w-full block text-center bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-lg transition-colors"
+                    >
+                      View Details
+                    </Link>
+                  </div>
                 </div>
               </div>
             ))}

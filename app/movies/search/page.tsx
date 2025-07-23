@@ -342,16 +342,6 @@ export default function SearchPage() {
                       <Star className="text-yellow-400 mr-1" size={16} />
                       {movie.rating}
                     </div>
-                    <div className="absolute bottom-2 right-2 flex gap-1">
-                      <FavoriteButton 
-                        movie={movie} 
-                        className="p-2 rounded-full bg-black/70 hover:bg-black/80" 
-                      />
-                      <WatchlistButton 
-                        movie={movie} 
-                        className="p-2 rounded-full bg-black/70 hover:bg-black/80" 
-                      />
-                    </div>
                   </div>
                   
                   <div className="p-4">
@@ -371,12 +361,26 @@ export default function SearchPage() {
                     <p className="text-gray-500 text-sm mb-3">{movie.genre}</p>
                     <p className="text-gray-300 text-sm mb-4 line-clamp-3">{movie.overview}</p>
                     
-                    <Link
-                      href={`/movies/${movie.id}`}
-                      className="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-lg transition-colors inline-block"
-                    >
-                      View Details
-                    </Link>
+                    <div className="flex flex-col gap-2">
+                      <div className="flex gap-2">
+                        <FavoriteButton 
+                          movie={movie} 
+                          className="flex-1 px-3 py-2 rounded-lg text-sm"
+                          showText={true}
+                        />
+                        <WatchlistButton 
+                          movie={movie} 
+                          className="flex-1 px-3 py-2 rounded-lg text-sm"
+                          showText={true}
+                        />
+                      </div>
+                      <Link
+                        href={`/movies/${movie.id}`}
+                        className="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-lg transition-colors text-center"
+                      >
+                        View Details
+                      </Link>
+                    </div>
                   </div>
                 </div>
               ))}
