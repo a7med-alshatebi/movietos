@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { useParams } from "next/navigation";
 
 interface PaginationBarProps {
   currentId: number | string;
@@ -22,12 +21,10 @@ export default function PaginationBar({ currentId, totalPages = 12, basePath, id
   // Generate visible page numbers based on screen size
   const getVisiblePages = () => {
     const maxVisiblePages = 5; // Show max 5 pages on mobile
-    const maxVisiblePagesDesktop = 8; // Show max 8 pages on desktop
     
-    // For mobile (will be handled by CSS)
-    let visiblePages = [];
+    const visiblePages = [];
     let startPage = Math.max(1, numericId - 2);
-    let endPage = Math.min(totalPages, startPage + maxVisiblePages - 1);
+    const endPage = Math.min(totalPages, startPage + maxVisiblePages - 1);
     
     // Adjust start if we're near the end
     if (endPage - startPage + 1 < maxVisiblePages) {
