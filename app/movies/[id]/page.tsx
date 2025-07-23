@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { useParams } from 'next/navigation';
 import Image from 'next/image';
+import Link from 'next/link';
 import { Star, Calendar, Clock, Heart, Bookmark, Play } from 'lucide-react';
 import PaginationBar from '../../components/PaginationBar';
 import FavoriteButton from '../../components/FavoriteButton';
@@ -254,7 +255,15 @@ const idToSlugMap: { [key: number]: string } = {
 export default function MovieDetailPage() {
   const params = useParams();
   const id = Array.isArray(params.id) ? params.id[0] : params.id;
-  const movie = mockMovieDetails[id?.toString() || "the-dark-knight"];
+  
+  // Try to find movie by slug first, then by numeric ID if it's a number
+  let movie: MovieDetail | undefined = mockMovieDetails[id?.toString() || ""];
+  
+  // If not found and ID is numeric, try to find by numeric ID in the data
+  if (!movie && id && !isNaN(Number(id))) {
+    const numericId = Number(id);
+    movie = Object.values(mockMovieDetails).find(m => m.id === numericId);
+  }
 
   const formatCurrency = (amount: number) => {
     return new Intl.NumberFormat('en-US', {
@@ -267,13 +276,38 @@ export default function MovieDetailPage() {
 
   if (!movie) {
     return (
-      <div className="min-h-screen bg-gray-900 flex items-center justify-center">
-        <div className="text-white text-xl">
-          Movie not found (ID: {id})
-          <br />
-          <small className="text-gray-400">
-            Available IDs: {Object.keys(mockMovieDetails).join(', ')}
-          </small>
+      <div className="min-h-screen bg-gray-900">
+        <div className="container mx-auto px-4 py-20">
+          <div className="text-center">
+            <div className="text-6xl mb-4">🎬</div>
+            <h1 className="text-4xl font-bold text-white mb-4">Movie Not Found</h1>
+            <p className="text-gray-400 mb-8 max-w-md mx-auto">
+              The movie you're looking for doesn't exist or has been removed.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/movies"
+                className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg transition-colors inline-block"
+              >
+                Browse Movies
+              </Link>
+              <Link
+                href="/"
+                className="bg-gray-800 hover:bg-gray-700 text-white px-6 py-3 rounded-lg transition-colors inline-block"
+              >
+                Go Home
+              </Link>
+            </div>
+            {/* Debug info (can be removed in production) */}
+            <details className="mt-8 text-left max-w-2xl mx-auto">
+              <summary className="text-gray-500 cursor-pointer">Debug Info</summary>
+              <div className="bg-gray-800 p-4 rounded mt-2 text-sm">
+                <p className="text-gray-400">Requested ID: <span className="text-white">{id}</span></p>
+                <p className="text-gray-400">Available slug IDs: <span className="text-white">{Object.keys(mockMovieDetails).join(', ')}</span></p>
+                <p className="text-gray-400">Available numeric IDs: <span className="text-white">{Object.values(mockMovieDetails).map(m => m.id).join(', ')}</span></p>
+              </div>
+            </details>
+          </div>
         </div>
       </div>
     );
