@@ -4,6 +4,8 @@ import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Star, Calendar, Clock } from 'lucide-react';
+import FavoriteButton from '../components/FavoriteButton';
+import WatchlistButton from '../components/WatchlistButton';
 
 // Mock data for movies (in a real app, you'd fetch from an API like TMDB)
 const mockMovies = [
@@ -186,6 +188,16 @@ export default function MoviesPage() {
                 <div className="absolute top-2 right-2 bg-black/70 text-white px-2 py-1 rounded flex items-center">
                   <Star className="text-yellow-400 mr-1" size={16} />
                   {movie.rating}
+                </div>
+                <div className="absolute bottom-2 right-2 flex gap-1">
+                  <FavoriteButton 
+                    movie={movie} 
+                    className="p-2 rounded-full bg-black/70 hover:bg-black/80" 
+                  />
+                  <WatchlistButton 
+                    movie={movie} 
+                    className="p-2 rounded-full bg-black/70 hover:bg-black/80" 
+                  />
                 </div>
               </div>
               

@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useParams } from "next/navigation";
 import { Star, Calendar, Clock, ArrowLeft } from "lucide-react";
+import FavoriteButton from "../../../components/FavoriteButton";
 
 // Sample movie data organized by genre
 const moviesByGenre = {
@@ -225,13 +226,21 @@ export default function GenreMoviesPage() {
                 key={movie.id}
                 className="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all hover:scale-105"
               >
-                <Image
-                  src={movie.poster}
-                  alt={movie.title}
-                  width={300}
-                  height={450}
-                  className="w-full h-64 object-cover"
-                />
+                <div className="relative">
+                  <Image
+                    src={movie.poster}
+                    alt={movie.title}
+                    width={300}
+                    height={450}
+                    className="w-full h-64 object-cover"
+                  />
+                  <div className="absolute bottom-2 right-2">
+                    <FavoriteButton 
+                      movie={movie} 
+                      className="p-2 rounded-full bg-black/70 hover:bg-black/80" 
+                    />
+                  </div>
+                </div>
                 <div className="p-4">
                   <h2 className="text-xl font-bold text-white mb-2 line-clamp-2">
                     {movie.title}

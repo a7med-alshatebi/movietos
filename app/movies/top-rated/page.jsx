@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Star, Calendar, Clock } from "lucide-react";
+import FavoriteButton from "../../components/FavoriteButton";
 
 const topRatedMovies = [
   {
@@ -44,13 +45,21 @@ export default function TopRatedPage() {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           {topRatedMovies.map((movie) => (
             <div key={movie.id} className="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-              <Image
-                src={movie.poster}
-                alt={movie.title}
-                width={400}
-                height={600}
-                className="w-full h-64 object-cover"
-              />
+              <div className="relative">
+                <Image
+                  src={movie.poster}
+                  alt={movie.title}
+                  width={400}
+                  height={600}
+                  className="w-full h-64 object-cover"
+                />
+                <div className="absolute bottom-2 right-2">
+                  <FavoriteButton 
+                    movie={movie} 
+                    className="p-2 rounded-full bg-black/70 hover:bg-black/80" 
+                  />
+                </div>
+              </div>
               <div className="p-6">
                 <h2 className="text-2xl font-bold text-white mb-2">{movie.title}</h2>
                 <div className="flex items-center space-x-4 mb-2">

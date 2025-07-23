@@ -4,56 +4,25 @@ import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Heart, Star, Calendar, Clock, Trash2 } from 'lucide-react';
-
-// Mock data for favorite movies
-const mockFavoriteMovies = [
-  {
-    id: "the-dark-knight",
-    title: "The Dark Knight",
-    poster: "/batman.jpeg",
-    rating: 9.0,
-    year: 2008,
-    runtime: 152,
-    genre: "Action, Crime, Drama",
-    overview: "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.",
-    dateAdded: "2024-01-15"
-  },
-  {
-    id: "inception",
-    title: "Inception",
-    poster: "/inception.jpeg",
-    rating: 8.8,
-    year: 2010,
-    runtime: 148,
-    genre: "Action, Sci-Fi, Thriller",
-    overview: "A thief who steals corporate secrets through dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O.",
-    dateAdded: "2024-01-10"
-  },
-  {
-    id: "interstellar",
-    title: "Interstellar",
-    poster: "/interstller.jpeg",
-    rating: 8.6,
-    year: 2014,
-    runtime: 169,
-    genre: "Adventure, Drama, Sci-Fi",
-    overview: "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.",
-    dateAdded: "2024-01-05"
-  }
-];
+import { useFavorites } from '../contexts/FavoritesContext';
 
 export default function FavoritesPage() {
-  const [favorites, setFavorites] = useState(mockFavoriteMovies);
+  const { favorites, removeFromFavorites, clearAllFavorites } = useFavorites();
   const [sortBy, setSortBy] = useState('dateAdded');
 
   const handleRemoveFromFavorites = (movieId: string) => {
-    setFavorites(favorites.filter(movie => movie.id !== movieId));
+    removeFromFavorites(movieId);
   };
 
   const handleSort = (criteria: string) => {
     setSortBy(criteria);
-    const sorted = [...favorites].sort((a, b) => {
-      switch (criteria) {
+    // Note: We'll sort the displayed favorites, but we can't mutate the context state directly
+    // The sorting will be handled in the render
+  };
+
+  const getSortedFavorites = () => {
+    return [...favorites].sort((a, b) => {
+      switch (sortBy) {
         case 'title':
           return a.title.localeCompare(b.title);
         case 'rating':
@@ -62,10 +31,9 @@ export default function FavoritesPage() {
           return b.year - a.year;
         case 'dateAdded':
         default:
-          return new Date(b.dateAdded).getTime() - new Date(a.dateAdded).getTime();
+          return new Date(b.dateAdded || '').getTime() - new Date(a.dateAdded || '').getTime();
       }
     });
-    setFavorites(sorted);
   };
 
   const formatDate = (dateString: string) => {
@@ -76,11 +44,13 @@ export default function FavoritesPage() {
     });
   };
 
-  const clearAllFavorites = () => {
+  const handleClearAllFavorites = () => {
     if (window.confirm('Are you sure you want to remove all movies from your favorites?')) {
-      setFavorites([]);
+      clearAllFavorites();
     }
   };
+
+  const sortedFavorites = getSortedFavorites();
 
   return (
     <div className="min-h-screen bg-gray-900">
@@ -112,7 +82,7 @@ export default function FavoritesPage() {
               </select>
 
               <button
-                onClick={clearAllFavorites}
+                onClick={handleClearAllFavorites}
                 className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg transition-colors flex items-center"
               >
                 <Trash2 className="mr-2" size={16} />
@@ -140,9 +110,9 @@ export default function FavoritesPage() {
         )}
 
         {/* Favorites Grid */}
-        {favorites.length > 0 && (
+        {sortedFavorites.length > 0 && (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {favorites.map((movie) => (
+            {sortedFavorites.map((movie) => (
               <div key={movie.id} className="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow group">
                 <div className="relative">
                   <Image
@@ -194,7 +164,7 @@ export default function FavoritesPage() {
                       View Details
                     </Link>
                     <span className="text-gray-500 text-xs">
-                      Added {formatDate(movie.dateAdded)}
+                      Added {formatDate(movie.dateAdded || '')}
                     </span>
                   </div>
                 </div>

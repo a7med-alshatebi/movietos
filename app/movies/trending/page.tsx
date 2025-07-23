@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { TrendingUp, Star, Calendar, Clock, Flame } from 'lucide-react';
+import FavoriteButton from '../../components/FavoriteButton';
 
 // Mock data for trending movies
 const mockTrendingMovies = [
@@ -215,6 +216,11 @@ export default function TrendingPage() {
 					>
  				 View Details
 						</Link>
+											<FavoriteButton 
+												movie={movie} 
+												className="px-6 py-2 rounded-lg" 
+												showText={true} 
+											/>
 											<button className="bg-gray-700 hover:bg-gray-600 text-white px-6 py-2 rounded-lg transition-colors">
 												Add to Watchlist
 											</button>

@@ -5,6 +5,8 @@ import { useParams } from 'next/navigation';
 import Image from 'next/image';
 import { Star, Calendar, Clock, Heart, Bookmark, Play } from 'lucide-react';
 import PaginationBar from '../../components/PaginationBar';
+import FavoriteButton from '../../components/FavoriteButton';
+import WatchlistButton from '../../components/WatchlistButton';
 
 // Movie details type
 type MovieDetail = {
@@ -253,8 +255,6 @@ export default function MovieDetailPage() {
   const params = useParams();
   const id = Array.isArray(params.id) ? params.id[0] : params.id;
   const movie = mockMovieDetails[id?.toString() || "the-dark-knight"];
-  const [isFavorite, setIsFavorite] = useState(false);
-  const [isInWatchlist, setIsInWatchlist] = useState(false);
 
   const formatCurrency = (amount: number) => {
     return new Intl.NumberFormat('en-US', {
@@ -263,14 +263,6 @@ export default function MovieDetailPage() {
       minimumFractionDigits: 0,
       maximumFractionDigits: 0,
     }).format(amount);
-  };
-
-  const toggleFavorite = () => {
-    setIsFavorite(!isFavorite);
-  };
-
-  const toggleWatchlist = () => {
-    setIsInWatchlist(!isInWatchlist);
   };
 
   if (!movie) {
@@ -346,28 +338,12 @@ export default function MovieDetailPage() {
 
             {/* Action Buttons */}
             <div className="flex flex-wrap gap-2 sm:gap-4 mb-8">
-              <button
-                onClick={toggleFavorite}
-                className={`flex items-center px-4 sm:px-6 py-2 sm:py-3 rounded-lg transition-colors ${
-                  isFavorite 
-                    ? 'bg-red-600 hover:bg-red-700 text-white' 
-                    : 'bg-gray-800 hover:bg-gray-700 text-gray-300'
-                }`}
-              >
-                <Heart className="mr-2" size={20} fill={isFavorite ? 'currentColor' : 'none'} />
-                {isFavorite ? 'Remove from Favorites' : 'Add to Favorites'}
-              </button>
-              <button
-                onClick={toggleWatchlist}
-                className={`flex items-center px-4 sm:px-6 py-2 sm:py-3 rounded-lg transition-colors ${
-                  isInWatchlist 
-                    ? 'bg-blue-600 hover:bg-blue-700 text-white' 
-                    : 'bg-gray-800 hover:bg-gray-700 text-gray-300'
-                }`}
-              >
-                <Bookmark className="mr-2" size={20} fill={isInWatchlist ? 'currentColor' : 'none'} />
-                {isInWatchlist ? 'Remove from Watchlist' : 'Add to Watchlist'}
-              </button>
+              <FavoriteButton movie={movie} />
+              <WatchlistButton 
+                movie={movie} 
+                className="flex items-center px-4 sm:px-6 py-2 sm:py-3 rounded-lg transition-colors"
+                showText={true}
+              />
               <button className="flex items-center bg-purple-600 hover:bg-purple-700 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg transition-colors">
                 <Play className="mr-2" size={20} />
                 Watch Trailer

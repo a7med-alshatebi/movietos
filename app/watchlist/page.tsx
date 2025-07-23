@@ -4,66 +4,15 @@ import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Bookmark, Star, Calendar, Clock, Check, X } from 'lucide-react';
-
-// Mock data for watchlist movies
-const mockWatchlistMovies = [
-  {
-    id: "pulp-fiction",
-    title: "Pulp Fiction",
-    poster: "/pulpfiction.jpeg",
-    rating: 8.9,
-    year: 1994,
-    runtime: 154,
-    genre: "Crime, Drama",
-    overview: "The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption.",
-    dateAdded: "2024-01-20",
-    priority: "high"
-  },
-  {
-    id: "the-matrix",
-    title: "The Matrix",
-    poster: "/thematrix.jpeg",
-    rating: 8.7,
-    year: 1999,
-    runtime: 136,
-    genre: "Action, Sci-Fi",
-    overview: "A computer programmer is led to fight an underground war against powerful computers who have constructed his entire reality with a system called the Matrix.",
-    dateAdded: "2024-01-18",
-    priority: "medium"
-  },
-  {
-    id: "forrest-gump",
-    title: "Forrest Gump",
-    poster: "/forestgump.webp",
-    rating: 8.8,
-    year: 1994,
-    runtime: 142,
-    genre: "Drama, Romance",
-    overview: "The presidencies of Kennedy and Johnson, the Vietnam War, the Watergate scandal and other historical events unfold from the perspective of an Alabama man with an IQ of 75.",
-    dateAdded: "2024-01-15",
-    priority: "low"
-  },
-  {
-    id: "goodfellas",
-    title: "Goodfellas",
-    poster: "/goodfelas.jpeg",
-    rating: 8.7,
-    year: 1990,
-    runtime: 146,
-    genre: "Biography, Crime, Drama",
-    overview: "The story of Henry Hill and his life in the mob, covering his relationship with his wife Karen Hill and his mob partners Jimmy Conway and Tommy DeVito.",
-    dateAdded: "2024-01-12",
-    priority: "medium"
-  }
-];
+import { useWatchlist } from '../contexts/WatchlistContext';
 
 export default function WatchlistPage() {
-  const [watchlist, setWatchlist] = useState(mockWatchlistMovies);
+  const { watchlist, removeFromWatchlist, updatePriority, clearWatchlist } = useWatchlist();
   const [sortBy, setSortBy] = useState('dateAdded');
   const [filterBy, setFilterBy] = useState('all');
 
   const handleRemoveFromWatchlist = (movieId: string) => {
-    setWatchlist(watchlist.filter(movie => movie.id !== movieId));
+    removeFromWatchlist(movieId);
   };
 
   const handleMarkAsWatched = (movieId: string) => {
@@ -72,18 +21,22 @@ export default function WatchlistPage() {
     }
   };
 
-  const handlePriorityChange = (movieId: string, newPriority: string) => {
-    setWatchlist(watchlist.map(movie => 
-      movie.id === movieId 
-        ? { ...movie, priority: newPriority }
-        : movie
-    ));
+  const handlePriorityChange = (movieId: string, newPriority: 'high' | 'medium' | 'low') => {
+    updatePriority(movieId, newPriority);
   };
 
   const handleSort = (criteria: string) => {
     setSortBy(criteria);
-    const sorted = [...watchlist].sort((a, b) => {
-      switch (criteria) {
+    // Note: In the context version, we would need to add sorting to the context
+    // For now, sorting will be handled by the display logic
+  };
+
+  const getFilteredMovies = () => {
+    const filtered = filterBy === 'all' ? watchlist : watchlist.filter(movie => movie.priority === filterBy);
+    
+    // Apply sorting
+    const sorted = [...filtered].sort((a, b) => {
+      switch (sortBy) {
         case 'title':
           return a.title.localeCompare(b.title);
         case 'rating':
@@ -98,12 +51,8 @@ export default function WatchlistPage() {
           return new Date(b.dateAdded).getTime() - new Date(a.dateAdded).getTime();
       }
     });
-    setWatchlist(sorted);
-  };
-
-  const getFilteredMovies = () => {
-    if (filterBy === 'all') return watchlist;
-    return watchlist.filter(movie => movie.priority === filterBy);
+    
+    return sorted;
   };
 
   const getPriorityColor = (priority: string) => {
@@ -125,7 +74,7 @@ export default function WatchlistPage() {
 
   const clearAllWatchlist = () => {
     if (window.confirm('Are you sure you want to remove all movies from your watchlist?')) {
-      setWatchlist([]);
+      clearWatchlist();
     }
   };
 
@@ -265,7 +214,7 @@ export default function WatchlistPage() {
                   <div className="mb-4">
                     <select
                       value={movie.priority}
-                      onChange={(e) => handlePriorityChange(movie.id, e.target.value)}
+                      onChange={(e) => handlePriorityChange(movie.id, e.target.value as 'high' | 'medium' | 'low')}
                       className="bg-gray-700 text-white px-3 py-1 rounded text-sm border border-gray-600 focus:outline-none focus:ring-2 focus:ring-purple-500"
                     >
                       <option value="high">High Priority</option>
