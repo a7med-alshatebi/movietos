@@ -268,7 +268,13 @@ export default function MovieDetailPage() {
   if (!movie) {
     return (
       <div className="min-h-screen bg-gray-900 flex items-center justify-center">
-        <div className="text-white text-xl">Movie not found</div>
+        <div className="text-white text-xl">
+          Movie not found (ID: {id})
+          <br />
+          <small className="text-gray-400">
+            Available IDs: {Object.keys(mockMovieDetails).join(', ')}
+          </small>
+        </div>
       </div>
     );
   }
