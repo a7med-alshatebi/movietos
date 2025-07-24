@@ -68,7 +68,7 @@ export default function FavoritesPage() {
 
   // Helper function to get the correct movie URL
   const getMovieUrl = (movieId: string) => {
-    const numericId = parseInt(movieId);
+    const numericId = parseInt(movieId);  
     const slug = idToSlugMap[numericId];
     return slug ? `/movies/${slug}` : `/movies/${movieId}`;
   };
