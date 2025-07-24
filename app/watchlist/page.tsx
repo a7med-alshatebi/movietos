@@ -6,6 +6,22 @@ import Link from 'next/link';
 import { Bookmark, Star, Calendar, Clock, Check, X } from 'lucide-react';
 import { useWatchlist } from '../contexts/WatchlistContext';
 
+// Mapping numeric IDs to slugs for proper navigation
+const idToSlugMap: { [key: number]: string } = {
+  1: "the-dark-knight",
+  2: "inception", 
+  3: "interstellar",
+  4: "pulp-fiction",
+  5: "the-matrix",
+  6: "forrest-gump",
+  7: "top-gun-maverick",
+  8: "black-panther",
+  9: "avatar-the-way-of-water",
+  10: "goodfellas",
+  11: "doctor-strange",
+  12: "minions"
+};
+
 export default function WatchlistPage() {
   const { watchlist, removeFromWatchlist, updatePriority, clearWatchlist } = useWatchlist();
   const [sortBy, setSortBy] = useState('dateAdded');
@@ -62,6 +78,13 @@ export default function WatchlistPage() {
       case 'low': return 'bg-green-600';
       default: return 'bg-gray-600';
     }
+  };
+
+  // Helper function to get the correct movie URL
+  const getMovieUrl = (movieId: string) => {
+    const numericId = parseInt(movieId);
+    const slug = idToSlugMap[numericId];
+    return slug ? `/movies/${slug}` : `/movies/${movieId}`;
   };
 
   const formatDate = (dateString: string) => {
@@ -225,7 +248,7 @@ export default function WatchlistPage() {
                   
                   <div className="flex items-center justify-between">
                     <Link
-                      href={`/movies/${movie.id}`}
+                      href={getMovieUrl(movie.id)}
                       className="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-lg transition-colors"
                     >
                       View Details

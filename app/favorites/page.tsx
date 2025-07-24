@@ -6,6 +6,22 @@ import Link from 'next/link';
 import { Heart, Star, Calendar, Clock, Trash2 } from 'lucide-react';
 import { useFavorites } from '../contexts/FavoritesContext';
 
+// Mapping numeric IDs to slugs for proper navigation
+const idToSlugMap: { [key: number]: string } = {
+  1: "the-dark-knight",
+  2: "inception", 
+  3: "interstellar",
+  4: "pulp-fiction",
+  5: "the-matrix",
+  6: "forrest-gump",
+  7: "top-gun-maverick",
+  8: "black-panther",
+  9: "avatar-the-way-of-water",
+  10: "goodfellas",
+  11: "doctor-strange",
+  12: "minions"
+};
+
 export default function FavoritesPage() {
   const { favorites, removeFromFavorites, clearAllFavorites } = useFavorites();
   const [sortBy, setSortBy] = useState('dateAdded');
@@ -48,6 +64,13 @@ export default function FavoritesPage() {
     if (window.confirm('Are you sure you want to remove all movies from your favorites?')) {
       clearAllFavorites();
     }
+  };
+
+  // Helper function to get the correct movie URL
+  const getMovieUrl = (movieId: string) => {
+    const numericId = parseInt(movieId);
+    const slug = idToSlugMap[numericId];
+    return slug ? `/movies/${slug}` : `/movies/${movieId}`;
   };
 
   const sortedFavorites = getSortedFavorites();
