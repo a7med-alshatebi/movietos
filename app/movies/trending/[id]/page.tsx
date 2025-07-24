@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useParams } from "next/navigation";
 import Link from "next/link";
-import { TrendingUp, Star, Calendar, Clock, Flame } from "lucide-react";
+import { Star, Calendar, Clock } from "lucide-react";
 
 // Mock data for trending movies (should match the trending list)
 const mockTrendingMovies = [

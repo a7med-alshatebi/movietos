@@ -1,10 +1,9 @@
 'use client';
 
-import { useState } from 'react';
 import { useParams } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Star, Calendar, Clock, Heart, Bookmark, Play } from 'lucide-react';
+import { Star, Calendar, Clock, Play } from 'lucide-react';
 import PaginationBar from '../../components/PaginationBar';
 import FavoriteButton from '../../components/FavoriteButton';
 import WatchlistButton from '../../components/WatchlistButton';
@@ -282,7 +281,7 @@ export default function MovieDetailPage() {
             <div className="text-6xl mb-4">🎬</div>
             <h1 className="text-4xl font-bold text-white mb-4">Movie Not Found</h1>
             <p className="text-gray-400 mb-8 max-w-md mx-auto">
-              The movie you're looking for doesn't exist or has been removed.
+              The movie you&apos;re looking for doesn&apos;t exist or has been removed.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
