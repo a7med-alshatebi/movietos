@@ -59,33 +59,21 @@ export default function Navigation() {
           <div className="md:hidden flex items-center gap-2">
             <Link
               href="/"
-              className={`p-2 rounded-full transition-colors ${
-                pathname === "/" 
-                  ? "text-purple-400 bg-purple-400/10" 
-                  : "text-gray-300 hover:text-purple-400"
-              }`}
+              className="text-gray-300 hover:text-purple-400 p-2 rounded-full transition-colors"
               aria-label="Back to Home"
             >
               <Home size={22} />
             </Link>
             <Link
               href="/movies/search"
-              className={`p-2 rounded-full transition-colors ${
-                pathname === "/movies/search" 
-                  ? "text-purple-400 bg-purple-400/10" 
-                  : "text-gray-300 hover:text-purple-400"
-              }`}
+              className="text-gray-300 hover:text-purple-400 p-2 rounded-full transition-colors"
               aria-label="Search Movies"
             >
               <Search size={22} />
             </Link>
             <Link
               href="/favorites"
-              className={`p-2 rounded-full transition-colors ${
-                pathname === "/favorites" 
-                  ? "text-purple-400 bg-purple-400/10" 
-                  : "text-gray-300 hover:text-purple-400"
-              }`}
+              className="text-gray-300 hover:text-purple-400 p-2 rounded-full transition-colors"
               aria-label="My Favorites"
             >
               <Heart size={22} />
