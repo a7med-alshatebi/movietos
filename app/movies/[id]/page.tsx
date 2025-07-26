@@ -44,7 +44,7 @@ const mockMovieDetails: { [key: string]: MovieDetail } = {
     budget: 185000000,
     revenue: 1004558444,
     tagline: "Welcome to a world without rules.",
-    trailerUrl: "https://www.youtube.com/watch?v=EXeTwQWrcwY"
+    trailerUrl: "https://youtu.be/GokKUqLcvD8?si=LV_BNfVDqR0tldqF"
   },
   "inception": {
     id: 2,
@@ -486,7 +486,7 @@ const mockMovieDetails: { [key: string]: MovieDetail } = {
     budget: 150000000,
     revenue: 374583625,
     tagline: "What a lovely day.",
-    trailerUrl: "https://youtu.be/GokKUqLcvD8?si=LV_BNfVDqR0tldqF"
+    trailerUrl: "https://www.youtube.com/watch?v=hEJnMQG9ev8"
   }
 };
 
