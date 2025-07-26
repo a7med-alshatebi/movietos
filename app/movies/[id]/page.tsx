@@ -44,7 +44,7 @@ const mockMovieDetails: { [key: string]: MovieDetail } = {
     budget: 185000000,
     revenue: 1004558444,
     tagline: "Welcome to a world without rules.",
-    trailerUrl: "https://youtu.be/GokKUqLcvD8?si=LV_BNfVDqR0tldqF"
+    trailerUrl: "https://www.youtube.com/watch?v=LDG9bisJEaI&pp=ygUiYmF0bWFuIHRoZSBkYXJrbmlnaHQgbW92aWUgdHJhaWxlcg%3D%3D"
   },
   "inception": {
     id: 2,
@@ -78,7 +78,7 @@ const mockMovieDetails: { [key: string]: MovieDetail } = {
     budget: 165000000,
     revenue: 677471339,   
     tagline: "Mankind was born on Earth. It was never meant to die here.",
-    trailerUrl: "https://www.youtube.com/watch?v=zSWdZVtXT0"
+    trailerUrl: "https://www.youtube.com/watch?v=zSWdZVtXT7E"
   },
   "pulp-fiction": {
     id: 4,
@@ -95,7 +95,7 @@ const mockMovieDetails: { [key: string]: MovieDetail } = {
     budget: 8000000,
     revenue: 213928762,
     tagline: "Just because you are a character doesn't mean that you have character.",
-    trailerUrl: "https://www.youtube.com/watch?v=s7EdQ4Fq9l"
+    trailerUrl: "https://www.youtube.com/watch?v=s7EdQ4FqNl0"
   },
   "the-matrix": {
     id: 5,
@@ -112,7 +112,7 @@ const mockMovieDetails: { [key: string]: MovieDetail } = {
     budget: 63000000,
     revenue: 463517383,
     tagline: "Welcome to the Real World.",
-    trailerUrl: "https://www.youtube.com/watch?v=vKQi3bpI38"
+    trailerUrl: "https://www.youtube.com/watch?v=vKQi3bIP5sU"
   },
   "forrest-gump": {
     id: 6,
@@ -657,10 +657,15 @@ export default function MovieDetailPage() {
                 className="flex items-center px-4 sm:px-6 py-2 sm:py-3 rounded-lg transition-colors"
                 showText={true}
               />
-              <button className="flex items-center bg-purple-600 hover:bg-purple-700 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg transition-colors">
+              <a 
+                href={movie.trailerUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center bg-purple-600 hover:bg-purple-700 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg transition-colors"
+              >
                 <Play className="mr-2" size={20} />
                 Watch Trailer
-              </button>
+              </a>
             </div>
 
             {/* Cast and Crew */}
