@@ -61,7 +61,7 @@ const mockMovieDetails: { [key: string]: MovieDetail } = {
     budget: 160000000,
     revenue: 836800000,
     tagline: "Your mind is the scene of the crime.",
-    trailerUrl: "https://www.youtube.com/watch?v=YoHD9XEInc0"
+    trailerUrl: "https://www.youtube.com/watch?v=zp_YGmAoht0&pp=ygUXSW5jZXB0aW9uIG1vdmllIHRyYWlsZXLSBwkJIgXoh8qnZ-k%3D"
   },
   "interstellar": {
     id: 3,
@@ -78,7 +78,7 @@ const mockMovieDetails: { [key: string]: MovieDetail } = {
     budget: 165000000,
     revenue: 677471339,   
     tagline: "Mankind was born on Earth. It was never meant to die here.",
-    trailerUrl: "https://www.youtube.com/watch?v=zSWdZVtXT7E"
+    trailerUrl: "https://www.youtube.com/watch?v=2LqzF5WauAw&pp=ygUaaW50ZXJzdGVsbGFyIG1vdmllIHRyYWlsZXI%3D"
   },
   "pulp-fiction": {
     id: 4,
@@ -95,7 +95,7 @@ const mockMovieDetails: { [key: string]: MovieDetail } = {
     budget: 8000000,
     revenue: 213928762,
     tagline: "Just because you are a character doesn't mean that you have character.",
-    trailerUrl: "https://www.youtube.com/watch?v=s7EdQ4FqNl0"
+    trailerUrl: "https://www.youtube.com/watch?v=tGpTpVyI_OQ&pp=ygUacHVscC1maWN0aW9uIG1vdmllIHRyYWlsZXI%3D"
   },
   "the-matrix": {
     id: 5,
@@ -112,7 +112,7 @@ const mockMovieDetails: { [key: string]: MovieDetail } = {
     budget: 63000000,
     revenue: 463517383,
     tagline: "Welcome to the Real World.",
-    trailerUrl: "https://www.youtube.com/watch?v=vKQi3bIP5sU"
+    trailerUrl: "https://www.youtube.com/watch?v=m8e-FF8MsqU&pp=ygUYdGhlLW1hdHJpeCBtb3ZpZSB0cmFpbGVy"
   },
   "forrest-gump": {
     id: 6,
@@ -129,7 +129,7 @@ const mockMovieDetails: { [key: string]: MovieDetail } = {
     budget: 55000000,
     revenue: 678226554,
     tagline: "Life is like a box of chocolates. You never know what you're gonna get.",
-    trailerUrl: "https://www.youtube.com/watch?v=bLvqoHBptjg"
+    trailerUrl: "https://www.youtube.com/watch?v=bLvqoHBptjg&pp=ygUaZm9ycmVzdC1ndW1wIG1vdmllIHRyYWlsZXI%3D"
   },
   "top-gun-maverick": {
     id: 7,
@@ -146,7 +146,7 @@ const mockMovieDetails: { [key: string]: MovieDetail } = {
     budget: 170000000,
     revenue: 1488732821,
     tagline: "Feel the need... The need for speed.",
-    trailerUrl: "https://www.youtube.com/watch?v=qSqVVswa420"
+    trailerUrl: "https://www.youtube.com/watch?v=qSqVVswa420&pp=ygUfIHRvcC1ndW4tbWF2ZXJpY2sgbW92aWUgdHJhaWxlcg%3D%3D"
   },
   "black-panther": {
     id: 8,
@@ -163,7 +163,7 @@ const mockMovieDetails: { [key: string]: MovieDetail } = {
     budget: 200000000,
     revenue: 1346913161,
     tagline: "Long live the king.",
-    trailerUrl: "https://www.youtube.com/watch?v=xjDjIWPwcPU"
+    trailerUrl: "https://www.youtube.com/watch?v=xjDjIWPwcPU&pp=ygUcYmxhY2stcGFudGhlciAgbW92aWUgdHJhaWxlcg%3D%3D"
   },
   "avatar-the-way-of-water": {
     id: 9,
@@ -180,7 +180,7 @@ const mockMovieDetails: { [key: string]: MovieDetail } = {
     budget: 460000000,
     revenue: 2320250281,
     tagline: "Return to Pandora.",
-    trailerUrl: "https://www.youtube.com/watch?v=d9MyW72ELq0"
+    trailerUrl: "https://www.youtube.com/watch?v=d9MyW72ELq0&pp=ygUmYXZhdGFyLXRoZS13YXktb2Ytd2F0ZXIgIG1vdmllIHRyYWlsZXI%3D"
   },
   "goodfellas": {
     id: 10,
@@ -197,7 +197,7 @@ const mockMovieDetails: { [key: string]: MovieDetail } = {
     budget: 25000000,
     revenue: 46836394,
     tagline: "Three Decades of Life in the Mafia.",
-    trailerUrl: "https://www.youtube.com/watch?v=qo5jJpHtI2Y"
+    trailerUrl: "https://www.youtube.com/watch?v=2ilzidi_J8Q&pp=ygUZZ29vZGZlbGxhcyAgbW92aWUgdHJhaWxlcg%3D%3D"
   },
   "doctor-strange": {
     id: 11,
@@ -214,7 +214,7 @@ const mockMovieDetails: { [key: string]: MovieDetail } = {
     budget: 165000000,
     revenue: 677796076,
     tagline: "Open your mind. Change your reality.",
-    trailerUrl: "https://www.youtube.com/watch?v=HSzx-zryEgM"
+    trailerUrl: "https://www.youtube.com/watch?v=Lt-U_t2pUHI&pp=ygUdZG9jdG9yLXN0cmFuZ2UgIG1vdmllIHRyYWlsZXI%3D"
   },
   "minions": {
     id: 12,
@@ -231,7 +231,7 @@ const mockMovieDetails: { [key: string]: MovieDetail } = {
     budget: 74000000,
     revenue: 1159444662,
     tagline: "Before Gru, they had a history of bad bosses.",
-    trailerUrl: "https://www.youtube.com/watch?v=eisKxhjBnZ0"
+    trailerUrl: "https://www.youtube.com/watch?v=98Gym6CazPs&pp=ygUWbWluaW9ucyAgbW92aWUgdHJhaWxlcg%3D%3D"
   },
   "titanic": {
     id: 13,
@@ -248,7 +248,7 @@ const mockMovieDetails: { [key: string]: MovieDetail } = {
     budget: 200000000,
     revenue: 2257844554,
     tagline: "Nothing on Earth could come between them.",
-    trailerUrl: "https://www.youtube.com/watch?v=2e-eXJ6HgkQ"
+    trailerUrl: "https://www.youtube.com/watch?v=kVrqfYjkTdQ&pp=ygUWdGl0YW5pYyAgbW92aWUgdHJhaWxlcg%3D%3D"
   },
   "the-godfather": {
     id: 14,
@@ -265,7 +265,7 @@ const mockMovieDetails: { [key: string]: MovieDetail } = {
     budget: 6000000,
     revenue: 287000000,
     tagline: "An offer you can't refuse.",
-    trailerUrl: "https://www.youtube.com/watch?v=UaVTIH8mujA"
+    trailerUrl: "https://www.youtube.com/watch?v=5TWIvLVQncs&pp=ygUcdGhlLWdvZGZhdGhlciAgbW92aWUgdHJhaWxlcg%3D%3D"
   },
   "avengers-endgame": {
     id: 15,
@@ -282,7 +282,7 @@ const mockMovieDetails: { [key: string]: MovieDetail } = {
     budget: 356000000,
     revenue: 2797501328,
     tagline: "Avenge the fallen.",
-    trailerUrl: "https://www.youtube.com/watch?v=TcMBFSGVi1c"
+    trailerUrl: "https://www.youtube.com/watch?v=znk2OICHbjY&pp=ygUfYXZlbmdlcnMtZW5kZ2FtZSAgbW92aWUgdHJhaWxlcg%3D%3D"
   },
   "jurassic-park": {
     id: 16,
@@ -299,7 +299,7 @@ const mockMovieDetails: { [key: string]: MovieDetail } = {
     budget: 63000000,
     revenue: 1046344801,
     tagline: "An adventure 65 million years in the making.",
-    trailerUrl: "https://www.youtube.com/watch?v=lc0UehYemQA"
+    trailerUrl: "https://www.youtube.com/watch?v=jan5CFWs9ic&pp=ygUcanVyYXNzaWMtcGFyayAgbW92aWUgdHJhaWxlcg%3D%3D"
   },
   "spider-man-no-way-home": {
     id: 17,
@@ -316,7 +316,7 @@ const mockMovieDetails: { [key: string]: MovieDetail } = {
     budget: 200000000,
     revenue: 1921847111,
     tagline: "The multiverse unleashed.",
-    trailerUrl: "https://www.youtube.com/watch?v=JfVOs4VSpmA"
+    trailerUrl: "https://www.youtube.com/watch?v=JfVOs4VSpmA&pp=ygUlc3BpZGVyLW1hbi1uby13YXktaG9tZSAgbW92aWUgdHJhaWxlcg%3D%3D"
   },
   "the-lion-king": {
     id: 18,
@@ -333,7 +333,7 @@ const mockMovieDetails: { [key: string]: MovieDetail } = {
     budget: 45000000,
     revenue: 968511805,
     tagline: "The greatest adventure of all is finding our place in the circle of life.",
-    trailerUrl: "https://www.youtube.com/watch?v=lFzVJEksoDY"
+    trailerUrl: "https://www.youtube.com/watch?v=lFzVJEksoDY&pp=ygUbdGhlLWxpb24ta2luZyBtb3ZpZSB0cmFpbGVy"
   },
   "deadpool": {
     id: 19,
@@ -350,7 +350,7 @@ const mockMovieDetails: { [key: string]: MovieDetail } = {
     budget: 58000000,
     revenue: 782612155,
     tagline: "Feel the love.",
-    trailerUrl: "https://www.youtube.com/watch?v=9SW7-8C8kL4"
+    trailerUrl: "https://www.youtube.com/watch?v=Xithigfg7dA&pp=ygUWZGVhZHBvb2wgbW92aWUgdHJhaWxlcg%3D%3D"
   },
   "frozen": {
     id: 20,
@@ -367,7 +367,7 @@ const mockMovieDetails: { [key: string]: MovieDetail } = {
     budget: 150000000,
     revenue: 1282973738,
     tagline: "Only an act of true love can thaw a frozen heart.",
-    trailerUrl: "https://www.youtube.com/watch?v=TbQm5doF_Uc"
+    trailerUrl: "https://www.youtube.com/watch?v=TbQm5doF_Uc&pp=ygUUZnJvemVuIG1vdmllIHRyYWlsZXI%3D"
   },
   "the-fast-and-the-furious": {
     id: 21,
@@ -384,7 +384,7 @@ const mockMovieDetails: { [key: string]: MovieDetail } = {
     budget: 38000000,
     revenue: 207283925,
     tagline: "If you have what it takes, you can have it all.",
-    trailerUrl: "https://www.youtube.com/watch?v=2TAOizOnNPo"
+    trailerUrl: "https://www.youtube.com/watch?v=ZsJz2TJAPjw&pp=ygUmdGhlLWZhc3QtYW5kLXRoZS1mdXJpb3VzIG1vdmllIHRyYWlsZXI%3D"
   },
   "wonder-woman": {
     id: 22,
@@ -401,7 +401,7 @@ const mockMovieDetails: { [key: string]: MovieDetail } = {
     budget: 149000000,
     revenue: 821847012,
     tagline: "Power. Grace. Wisdom. Wonder.",
-    trailerUrl: "https://www.youtube.com/watch?v=1Q8fG0TtVAY"
+    trailerUrl: "https://www.youtube.com/watch?v=1Q8fG0TtVAY&pp=ygUad29uZGVyLXdvbWFuIG1vdmllIHRyYWlsZXI%3D"
   },
   "john-wick": {
     id: 23,
@@ -418,7 +418,7 @@ const mockMovieDetails: { [key: string]: MovieDetail } = {
     budget: 20000000,
     revenue: 86013179,
     tagline: "Don't set him off.",
-    trailerUrl: "https://www.youtube.com/watch?v=C0BMx-qxsP4"
+    trailerUrl: "https://www.youtube.com/watch?v=2AUmvWm5ZDQ&pp=ygUXam9obi13aWNrIG1vdmllIHRyYWlsZXI%3D"
   },
   "the-shawshank-redemption": {
     id: 24,
@@ -435,7 +435,7 @@ const mockMovieDetails: { [key: string]: MovieDetail } = {
     budget: 25000000,
     revenue: 28341469,
     tagline: "Fear can hold you prisoner. Hope can set you free.",
-    trailerUrl: "https://www.youtube.com/watch?v=NmzuHjWmXOc"
+    trailerUrl: "https://www.youtube.com/watch?v=NmzuHjWmXOc&pp=ygUgdGhlLXNoYXdzaGFuay1yZWRlbXB0aW9uIHRyYWlsZXI%3D"
   },
   "star-wars-a-new-hope": {
     id: 25,
@@ -452,7 +452,7 @@ const mockMovieDetails: { [key: string]: MovieDetail } = {
     budget: 11000000,
     revenue: 775398007,
     tagline: "A long time ago in a galaxy far, far away...",
-    trailerUrl: "https://www.youtube.com/watch?v=1g3_CFmnU7k"
+    trailerUrl: "https://www.youtube.com/watch?v=vZ734NWnAHA&pp=ygUcc3Rhci13YXJzLWEtbmV3LWhvcGUgdHJhaWxlcg%3D%3D"
   },
   "guardians-of-the-galaxy": {
     id: 26,
@@ -469,7 +469,7 @@ const mockMovieDetails: { [key: string]: MovieDetail } = {
     budget: 196000000,
     revenue: 773350147,
     tagline: "All heroes start somewhere.",
-    trailerUrl: "https://www.youtube.com/watch?v=d96cjJhvlMA"
+    trailerUrl: "https://www.youtube.com/watch?v=u3V5KDHRQvk&pp=ygUfZ3VhcmRpYW5zLW9mLXRoZS1nYWxheHkgdHJhaWxlcg%3D%3D"
   },
   "mad-max-fury-road": {
     id: 27,
@@ -486,7 +486,7 @@ const mockMovieDetails: { [key: string]: MovieDetail } = {
     budget: 150000000,
     revenue: 374583625,
     tagline: "What a lovely day.",
-    trailerUrl: "https://www.youtube.com/watch?v=hEJnMQG9ev8"
+    trailerUrl: "https://www.youtube.com/watch?v=hEJnMQG9ev8&pp=ygUZbWFkLW1heC1mdXJ5LXJvYWQgdHJhaWxlcg%3D%3D"
   }
 };
 
