@@ -486,7 +486,7 @@ const mockMovieDetails: { [key: string]: MovieDetail } = {
     budget: 150000000,
     revenue: 374583625,
     tagline: "What a lovely day.",
-    trailerUrl: "https://www.youtube.com/watch?v=hEJnMQG9ev8"
+    trailerUrl: "https://youtu.be/GokKUqLcvD8?si=LV_BNfVDqR0tldqF"
   }
 };
 
