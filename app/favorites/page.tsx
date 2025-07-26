@@ -19,7 +19,22 @@ const idToSlugMap: { [key: number]: string } = {
   9: "avatar-the-way-of-water",
   10: "goodfellas",
   11: "doctor-strange",
-  12: "minions"
+  12: "minions",
+  13: "titanic",
+  14: "the-godfather",
+  15: "avengers-endgame",
+  16: "jurassic-park",
+  17: "spider-man-no-way-home",
+  18: "the-lion-king",
+  19: "deadpool",
+  20: "frozen",
+  21: "the-fast-and-the-furious",
+  22: "wonder-woman",
+  23: "john-wick",
+  24: "the-shawshank-redemption",
+  25: "star-wars-a-new-hope",
+  26: "guardians-of-the-galaxy",
+  27: "mad-max-fury-road"
 };
 
 export default function FavoritesPage() {
