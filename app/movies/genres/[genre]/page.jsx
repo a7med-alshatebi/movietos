@@ -41,7 +41,7 @@ const moviesByGenre = {
     {
       id: "avengers-endgame",
       title: "Avengers: Endgame",
-      poster: "/avengers-endgame.jpeg",
+      poster: "/avengersendgame.jpeg",
       rating: 8.4,
       year: 2019,
       runtime: 181,
@@ -50,7 +50,7 @@ const moviesByGenre = {
     {
       id: "spider-man-no-way-home",
       title: "Spider-Man: No Way Home",
-      poster: "/spider-man-nwh.jpeg",
+      poster: "/spiderman.jpeg",
       rating: 8.2,
       year: 2021,
       runtime: 148,
@@ -59,7 +59,7 @@ const moviesByGenre = {
     {
       id: "deadpool",
       title: "Deadpool",
-      poster: "/deadpool.jpeg",
+      poster: "/deadpool.webp",
       rating: 8.0,
       year: 2016,
       runtime: 108,
@@ -68,7 +68,7 @@ const moviesByGenre = {
     {
       id: "the-fast-and-the-furious",
       title: "The Fast and the Furious",
-      poster: "/fast-furious.jpeg",
+      poster: "/The Fast and the Furious.webp",
       rating: 6.8,
       year: 2001,
       runtime: 106,
@@ -77,7 +77,7 @@ const moviesByGenre = {
     {
       id: "wonder-woman",
       title: "Wonder Woman",
-      poster: "/wonder-woman.jpeg",
+      poster: "/wonderwoman.jpeg",
       rating: 7.4,
       year: 2017,
       runtime: 141,
@@ -86,7 +86,7 @@ const moviesByGenre = {
     {
       id: "john-wick",
       title: "John Wick",
-      poster: "/john-wick.jpeg",
+      poster: "/johnwick.jpeg",
       rating: 7.4,
       year: 2014,
       runtime: 101,
@@ -95,7 +95,7 @@ const moviesByGenre = {
     {
       id: "guardians-of-the-galaxy",
       title: "Guardians of the Galaxy",
-      poster: "/guardians-galaxy.jpeg",
+      poster: "/guardiansofthegalaxy.jpeg",
       rating: 8.0,
       year: 2014,
       runtime: 121,
@@ -104,7 +104,7 @@ const moviesByGenre = {
     {
       id: "mad-max-fury-road",
       title: "Mad Max: Fury Road",
-      poster: "/mad-max.jpeg",
+      poster: "/Mad Max_ Fury Road.jpeg",
       rating: 8.1,
       year: 2015,
       runtime: 120,
@@ -133,7 +133,7 @@ const moviesByGenre = {
     {
       id: "jurassic-park",
       title: "Jurassic Park",
-      poster: "/jurassic-park.jpeg",
+      poster: "/jurassicpark.jpeg",
       rating: 8.1,
       year: 1993,
       runtime: 127,
@@ -142,7 +142,7 @@ const moviesByGenre = {
     {
       id: "the-lion-king",
       title: "The Lion King",
-      poster: "/lion-king.jpeg",
+      poster: "/thelionking.jpeg",
       rating: 8.5,
       year: 1994,
       runtime: 88,
@@ -160,7 +160,7 @@ const moviesByGenre = {
     {
       id: "star-wars-a-new-hope",
       title: "Star Wars: A New Hope",
-      poster: "/star-wars-anh.jpeg",
+      poster: "/starwars.jpeg",
       rating: 8.6,
       year: 1977,
       runtime: 121,
@@ -207,7 +207,7 @@ const moviesByGenre = {
     {
       id: "the-godfather",
       title: "The Godfather",
-      poster: "/godfather.jpeg",
+      poster: "/thegodfather.jpeg",
       rating: 9.2,
       year: 1972,
       runtime: 175,
@@ -216,7 +216,7 @@ const moviesByGenre = {
     {
       id: "the-shawshank-redemption",
       title: "The Shawshank Redemption",
-      poster: "/shawshank.jpeg",
+      poster: "/The Shawshank Redemption.jpeg",
       rating: 9.3,
       year: 1994,
       runtime: 142,
@@ -263,7 +263,7 @@ const moviesByGenre = {
     {
       id: "jurassic-park",
       title: "Jurassic Park",
-      poster: "/jurassic-park.jpeg",
+      poster: "/jurassicpark.jpeg",
       rating: 8.1,
       year: 1993,
       runtime: 127,
@@ -272,7 +272,7 @@ const moviesByGenre = {
     {
       id: "star-wars-a-new-hope",
       title: "Star Wars: A New Hope",
-      poster: "/star-wars-anh.jpeg",
+      poster: "/starwars.jpeg",
       rating: 8.6,
       year: 1977,
       runtime: 121,
@@ -281,7 +281,7 @@ const moviesByGenre = {
     {
       id: "mad-max-fury-road",
       title: "Mad Max: Fury Road",
-      poster: "/mad-max.jpeg",
+      poster: "/Mad Max_ Fury Road.jpeg",
       rating: 8.1,
       year: 2015,
       runtime: 120,
@@ -310,7 +310,7 @@ const moviesByGenre = {
     {
       id: "the-godfather",
       title: "The Godfather",
-      poster: "/godfather.jpeg",
+      poster: "/thegodfather.jpeg",
       rating: 9.2,
       year: 1972,
       runtime: 175,
@@ -319,7 +319,7 @@ const moviesByGenre = {
     {
       id: "the-fast-and-the-furious",
       title: "The Fast and the Furious",
-      poster: "/fast-furious.jpeg",
+      poster: "/The Fast and the Furious.webp",
       rating: 6.8,
       year: 2001,
       runtime: 106,
@@ -328,7 +328,7 @@ const moviesByGenre = {
     {
       id: "john-wick",
       title: "John Wick",
-      poster: "/john-wick.jpeg",
+      poster: "/johnwick.jpeg",
       rating: 7.4,
       year: 2014,
       runtime: 101,
@@ -406,7 +406,7 @@ const moviesByGenre = {
     {
       id: "the-lion-king",
       title: "The Lion King",
-      poster: "/lion-king.jpeg",
+      poster: "/thelionking.jpeg",
       rating: 8.5,
       year: 1994,
       runtime: 88,
@@ -435,7 +435,7 @@ const moviesByGenre = {
     {
       id: "spider-man-no-way-home",
       title: "Spider-Man: No Way Home",
-      poster: "/spider-man-nwh.jpeg",
+      poster: "/spiderman.jpeg",
       rating: 8.2,
       year: 2021,
       runtime: 148,
@@ -444,7 +444,7 @@ const moviesByGenre = {
     {
       id: "wonder-woman",
       title: "Wonder Woman",
-      poster: "/wonder-woman.jpeg",
+      poster: "/wonderwoman.jpeg",
       rating: 7.4,
       year: 2017,
       runtime: 141,
@@ -453,7 +453,7 @@ const moviesByGenre = {
     {
       id: "star-wars-a-new-hope",
       title: "Star Wars: A New Hope",
-      poster: "/star-wars-anh.jpeg",
+      poster: "/starwars.jpeg",
       rating: 8.6,
       year: 1977,
       runtime: 121,
@@ -473,7 +473,7 @@ const moviesByGenre = {
     {
       id: "jurassic-park",
       title: "Jurassic Park",
-      poster: "/jurassic-park.jpeg",
+      poster: "/jurassicpark.jpeg",
       rating: 8.1,
       year: 1993,
       runtime: 127,
@@ -482,7 +482,7 @@ const moviesByGenre = {
     {
       id: "the-fast-and-the-furious",
       title: "The Fast and the Furious",
-      poster: "/fast-furious.jpeg",
+      poster: "/The Fast and the Furious.webp",
       rating: 6.8,
       year: 2001,
       runtime: 106,
@@ -491,7 +491,7 @@ const moviesByGenre = {
     {
       id: "john-wick",
       title: "John Wick",
-      poster: "/john-wick.jpeg",
+      poster: "/johnwick.jpeg",
       rating: 7.4,
       year: 2014,
       runtime: 101,
