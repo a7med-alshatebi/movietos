@@ -368,7 +368,7 @@ const moviesByGenre = {
     {
       id: "deadpool",
       title: "Deadpool",
-      poster: "/deadpool.jpeg",
+      poster: "/deadpool.webp",
       rating: 8.0,
       year: 2016,
       runtime: 108,
@@ -386,7 +386,7 @@ const moviesByGenre = {
     {
       id: "guardians-of-the-galaxy",
       title: "Guardians of the Galaxy",
-      poster: "/guardians-galaxy.jpeg",
+      poster: "/guardiansofthegalaxy.jpeg",
       rating: 8.0,
       year: 2014,
       runtime: 121,
