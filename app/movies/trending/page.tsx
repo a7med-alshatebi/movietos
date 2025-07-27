@@ -221,9 +221,6 @@ export default function TrendingPage() {
 												className="px-6 py-2 rounded-lg" 
 												showText={true} 
 											/>
-											<button className="bg-gray-700 hover:bg-gray-600 text-white px-6 py-2 rounded-lg transition-colors">
-												Add to Watchlist
-											</button>
 										</div>
 									</div>
 								</div>
