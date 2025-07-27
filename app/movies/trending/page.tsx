@@ -217,16 +217,6 @@ export default function TrendingPage() {
 					>
  				 View Details
 						</Link>
-											<FavoriteButton 
-												movie={movie} 
-												className="px-6 py-2 rounded-lg" 
-												showText={true} 
-											/>
-											<WatchlistButton 
-												movie={movie} 
-												className="px-6 py-2 rounded-lg" 
-												showText={true} 
-											/>
 										</div>
 									</div>
 								</div>

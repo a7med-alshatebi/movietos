@@ -4,6 +4,8 @@ import Image from "next/image";
 import { useParams } from "next/navigation";
 import Link from "next/link";
 import { Star, Calendar, Clock } from "lucide-react";
+import FavoriteButton from "../../../components/FavoriteButton";
+import WatchlistButton from "../../../components/WatchlistButton";
 
 // Mock data for trending movies (should match the trending list)
 const mockTrendingMovies = [
@@ -144,9 +146,11 @@ export default function TrendingMovieDetailPage() {
               >
                 Back to Trending
               </Link>
-              <button className="bg-gray-700 hover:bg-gray-600 text-white px-6 py-2 rounded-lg transition-colors">
-                Add to Watchlist
-              </button>
+              <WatchlistButton 
+                movie={movie} 
+                className="px-6 py-2 rounded-lg" 
+                showText={true} 
+              />
             </div>
           </div>
         </div>
